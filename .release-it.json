@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/release-it/schema/release-it.json",
 
   "git": {
-    "requireBranch": "main",
+    "requireBranch": "master",
     "tagName": "v${version}",
     "commitMessage": "chore(release): ${version}",
     "requireCleanWorkingDir": true,
