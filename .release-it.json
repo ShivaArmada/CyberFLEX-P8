@@ -1,0 +1,24 @@
+{
+  "$schema": "https://unpkg.com/release-it/schema/release-it.json",
+
+  "git": {
+    "requireBranch": "main",
+    "tagName": "v${version}",
+    "commitMessage": "chore(release): ${version}",
+    "requireCleanWorkingDir": true,
+    "requireUpstream": false,
+    "push": true,
+    "pushArgs": ["--follow-tags"]
+  },
+  "hooks": {
+    "before:init": ["git pull", "npm run lint", "npm run test"],
+    "after:bump": [ "npx auto-changelog -p", "npm run build"],
+    "after:release": ["echo 'Released ${name} version ${version} to ${repo.repositoryUrl}'"]
+  },
+  "npm": {
+    "publish": true
+  },
+  "github": {
+    "release": true
+  }
+}
