@@ -1,10 +1,10 @@
 import React from "react";
 import AppWrapper from "../BlocWrapper/block"; // Assurez-vous que le chemin est correct et cohérent avec le nom de fichier et l'exportation
-import "../Styles/Works.css";
+import "../Styles/Mentions.css";
 import Header from "../Components/Header/Header";
 
 
-function Works() {
+function Mentions() {
   return (
     <AppWrapper>
       <div className="App">{/* Contenu de votre application ici */}
@@ -15,4 +15,4 @@ function Works() {
   );
 }
 
-export default Works;
+export default Mentions;
