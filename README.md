@@ -18,7 +18,6 @@
 ## Outils utilisés ⚙️
 
 - **React** : Utilisé pour le développement frontend.
-- **HTML** : Utilisé pour la structure des pages web.
 - **OVH** : Utilisé pour obtenir le nom de domaine.
 - **Cloudflare** : Pour la redirection d'adresse IP (en avoir deux distinctes) et les atk DDOS.
 - **FastComet** : L'hébergement du projet cyberflex.fr .
