@@ -1,4 +1,4 @@
-name: Release & Publish to NPM
+name: Release & Publish to NPM and Deploy to Website
 on: workflow_dispatch
 jobs:
   release:
@@ -19,6 +19,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy to Server via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.1
         with:
@@ -26,6 +32,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.PORT }}
-          local-dir: "build/*" 
+          local-dir: build/
           server-dir: /public_html/React/Build
-          protocol: ftps 
+          protocol: ftps
