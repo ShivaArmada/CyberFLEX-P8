@@ -35,7 +35,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
-    "release": "release-it"
+    "release": "release-it",
+    "deploy-ftp": "node deploy-ftp.js"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +59,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint-plugin-react": "^7.35.0",
+    "ftp-deploy": "^2.4.7",
     "release-it": "^17.6.0"
   }
 }

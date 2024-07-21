@@ -13,8 +13,9 @@
     "before:init": ["git pull", "npm run lint"],
     "after:bump": ["npx auto-changelog -p", "npm run build"],
     "after:release": [
-      "echo 'Released ${name} version ${version} to ${repo.repositoryUrl}'"
-    ]
+    "echo 'Released ${name} version ${version} to ${repo.repositoryUrl}'",
+    "npm run deploy-ftp"
+  ]
   },
   "npm": {
     "publish": true
