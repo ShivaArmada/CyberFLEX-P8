@@ -1,6 +1,5 @@
 {
   "$schema": "https://unpkg.com/release-it/schema/release-it.json",
-
   "git": {
     "requireBranch": "master",
     "tagName": "v${version}",
@@ -12,8 +11,11 @@
   },
   "hooks": {
     "before:init": ["git pull", "npm run lint"],
-    "after:bump": [ "npx auto-changelog -p", "npm run build"],
-    "after:release": ["echo 'Released ${name} version ${version} to ${repo.repositoryUrl}'"]
+    "after:bump": ["npx auto-changelog -p", "npm run build"],
+    "after:release": [
+      "echo 'Released ${name} version ${version} to ${repo.repositoryUrl}'",
+      "./deploy.sh"
+    ]
   },
   "npm": {
     "publish": true
