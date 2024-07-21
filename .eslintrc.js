@@ -1,9 +1,14 @@
 module.exports = {
-  // Autres configurations...
+  env: {
+    browser: true, // Adds browser global variables like 'window', 'document'
+    node: true, // Adds Node.js global variables and Node.js scoping
+    es2021: true, // Adds all ECMAScript 2021 globals and automatically sets the ecmaVersion parser option to 12
+  },
   rules: {
     'no-mixed-operators': 'off',
     'no-sequences': 'off',
     'no-unused-expressions': 'off',
+    'react/prop-types': 'off',
   },
   parserOptions: {
     ecmaVersion: 2020,
@@ -16,10 +21,9 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
   ],
-  // Add your custom rules here
   settings: {
     react: {
-      version: 'detect', // Automatically detect the react version
+      version: 'detect',
     },
   },
 };
