@@ -34,7 +34,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
     "release": "release-it"
   },
   "eslintConfig": {
@@ -57,6 +57,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint-plugin-react": "^7.35.0",
     "release-it": "^17.6.0"
   }
 }
