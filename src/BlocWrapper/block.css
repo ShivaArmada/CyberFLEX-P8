@@ -12,7 +12,7 @@ html, body {
   --color3: 142, 68, 173; /* Violet plus foncé */
   --color4: 255, 255, 141; /* Jaune encore plus clair */
   --color5: 103, 58, 183; /* Violet encore plus foncé */
-  --color-interactive: 156, 39, 176; /* Violet interactif */
+  --color-interactive: 186, 69, 206; /* Violet interactif */
   --circle-size: 200%;
   --blending: hard-light;
 }

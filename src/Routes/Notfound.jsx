@@ -7,7 +7,7 @@ import Header from "../Components/Header/Header";
 function Notfound() {
   return (
     <AppWrapper>
-      <div className="App">{/* Contenu de votre application ici */}
+      <div className="App">
         < Header />
         
       </div>

@@ -7,16 +7,16 @@ header{
 }
 
 .Logo-Company{
-  width:5%; 
+  width:10%; 
   height:auto; 
 position: absolute;
     top:45px;
-    left:47.3%;
+    left:45%;
   text-align:center; 
   transition: transform 0.3s ease, color 0.3s ease;
 }
 .Logo-Company:hover{
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 .hamburger{
   background:none;
