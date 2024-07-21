@@ -19,8 +19,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          FTP_HOST: ${{ secrets.HOST }}
-          FTP_USERNAME: ${{ secrets.USERNAME }}
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          FTP_PORT: ${{ secrets.PORT }}
-
+          FTP_PORT: ${{ secrets.FTP_PORT }}

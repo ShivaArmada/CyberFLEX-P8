@@ -8,21 +8,10 @@ const config = {
   port: process.env.FTP_PORT || 21,
   localRoot: __dirname + "/build",
   remoteRoot: "/public_html/React/Build",
-  include: ["*", "**/*"],      // upload all files recursively
-  deleteRemote: false,         // do not delete existing files at destination
-  forcePasv: true              // use passive mode
+  include: ["*", "**/*"], // Upload all files recursively
+  deleteRemote: false, // Do not delete existing files at destination
+  forcePasv: true // Use passive mode
 };
-
-ftpDeploy.deploy(config, function(err) {
-  if (err) {
-    console.log(err);
-    process.exit(1);
-  } else {
-    console.log("Deployment finished");
-    process.exit(0);
-  }
-});
-
 
 console.log('Starting FTP deployment with config:', config);
 
