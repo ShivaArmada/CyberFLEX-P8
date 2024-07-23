@@ -1,12 +1,20 @@
-footer {
+.Footer-ensemble {
     position: absolute;
     bottom: 0;
     width: 100%;
     max-height: 4%;
-    max-height: 300px; /* Assure que la hauteur ne dépasse pas 300px */
     display: flex;
+    z-index: 1000;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.Footer-ensemble a {
+    text-decoration: none;
+    color: black;
+}
+.Footer-ensemble, .Footer-ensemble * {
+    background-color: white !important;
 }
 
 .gauche-footer, .droite-footer, .bas-footer {
@@ -17,10 +25,13 @@ footer {
 .gauche-footer {
     left: 0;
     bottom: 50px; /* Positionne à la moitié du footer vers le bas */
+    padding-top: 25px ;
+    padding-bottom: 25px ;
+    line-height: 2.18em;
 }
 .gauche-footer p {
     margin: 0; /* Supprime la marge par défaut */
-    color: #FFFFFF; /* Changez la couleur selon votre design */
+    color: black; /* Changez la couleur selon votre design */
     font-size: 1.2rem; /* Augmente la taille du texte */
     font-weight: bold; /* Met en gras le texte */
     text-align: center; /* Aligne le texte à droite */
@@ -29,14 +40,33 @@ footer {
 .droite-footer {
     right: 0px;
     bottom: 50px; /* Positionne à la moitié du footer vers le bas */
+    padding-top: 25px ;
+    padding-bottom: 25px ;
+    line-height: 2em;
 }
 .droite-footer p {
     margin: 0; /* Supprime la marge par défaut */
-    color: #FFFFFF; /* Changez la couleur selon votre design */
+    color: black; /* Changez la couleur selon votre design */
     font-size: 1.2rem; /* Augmente la taille du texte */
     font-weight: bold; /* Met en gras le texte */
     text-align: center; /* Aligne le texte à droite */
 }
+.droite-footer input, button {
+    margin-top: 10px; /* Ajoute un peu d'espace en haut des éléments */
+    color: black; /* Changez la couleur selon votre design */
+    font-size: 1.33rem; /* Augmente la taille du texte */
+    font-weight: bold; /* Met en gras le texte */
+    text-align: center; /* Aligne le texte à droite */
+}
+form {
+    display: flex; /* Correction : doit être 'flex' pour appliquer 'justify-content' */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    height: 100%; /* Assure que le conteneur prend toute la hauteur disponible */
+    color: black; /* Changez la couleur selon votre design */
+
+}
+
 
 .bas-footer {
     left: 0;
@@ -44,9 +74,10 @@ footer {
     bottom: 0;
     width: 100%; /* Prend toute la largeur disponible */
     text-align: center; /* Centre le texte dans la partie basse */
-    color: #FFFFFF; /* Changez la couleur selon votre design */
+    color: black; /* Changez la couleur selon votre design */
     font-size: 1.2rem; /* Augmente la taille du texte */
     font-weight: bold; /* Met en gras le texte */
+    z-index: -1; /* Place le texte derrière les autres éléments */
 }
 
 .svg-footer-social {
@@ -54,7 +85,7 @@ footer {
     justify-content: space-around; /* Espacement entre les icônes */
     align-items: center; /* Centre les icônes verticalement */
     height: 100%; /* Assure que le conteneur prend toute la hauteur disponible */
-    color: #FFFFFF; /* Changez la couleur selon votre design */
+    color: black; /* Changez la couleur selon votre design */
 }
 
 .svg-footer-social .fa-svg-icon {
