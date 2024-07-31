@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareFacebook, faSquareTwitter, faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
+import logobw from "../../Assets/bwlogo.png"
 
 const Footer = () => {
   const [placeholder, setPlaceholder] = useState("Votre adresse e-mail");
@@ -21,6 +22,12 @@ const Footer = () => {
           <p>
             <a href="mailto:shiva@cyberflex.fr">shiva@cyberflex.fr</a>
           </p>
+        </div>
+        <div className="milieu-footer">
+
+          <img src={ logobw } alt="logo-company-black-white" />
+          <a href="/about"><p>Politique de confidentialité</p></a>
+
         </div>
         <div className="droite-footer">
           <a href="https://app.voxiplan.com/s/9991590578"><p>Horaires: 9h-12h / 14h-18h</p></a>
@@ -51,7 +58,7 @@ const Footer = () => {
         </div>
 
         <div className="bas-footer">
-          <p><span id="copyright">©</span> 2024 - Tout droits réservés</p>
+          <p><span id="copyright">©</span> 2024 CyberFLEX - Tout droits réservés</p>
         </div>
       </div>
     </footer>

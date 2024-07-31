@@ -16,12 +16,11 @@
 .Footer-ensemble, .Footer-ensemble * {
     background-color: rgb(249, 250, 220) !important;
     font-family:'Urbanist', sans-serif;
-    height: 264,26px;
 }
 
 .gauche-footer, .droite-footer, .bas-footer {
     position: absolute;
-    width: 50%; /* Divise l'espace en deux pour gauche et droite */
+    width: 33.33%; /* Divise l'espace en deux pour gauche et droite */
     height: relative;
 }
 
@@ -40,6 +39,23 @@
     font-weight: bold; /* Met en gras le texte */
     text-align: center; /* Aligne le texte à droite */
     
+}
+
+
+.milieu-footer {
+    bottom: 50px; /* Positionne à la moitié du footer vers le bas */
+    padding-top: 25px ;
+    padding-bottom: 25px ;
+    line-height: 2em;
+}
+
+.milieu-footer img {
+    max-width: 100px; /* Adjust size as needed */
+}
+
+.milieu-footer a {
+    display: block; /* Ensure the link takes up full width */
+    margin-top: 10px; /* Add some space above the link */
 }
 
 .droite-footer {
@@ -93,10 +109,16 @@
     font-weight: bold; /* Met en gras le texte */
     z-index: -1; /* Place le texte derrière les autres éléments */
 }
+.bas-footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre verticalement le texte et le logo */
+}
 
 #copyright {
-    bottom : 50%
-}
+    margin-bottom: 3px; 
+    margin-right: 5px; /* Ajustez la valeur selon vos besoins */
+    font-size: 1.2rem; /* Ajustez la valeur selon vos besoins */}
 
 .svg-footer-social {
     display: flex; /* Correction : doit être 'flex' pour appliquer 'justify-content' */
