@@ -32,7 +32,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="milieu-footer">
-          <a href="/about">
+          <a href="/mentions">
             <p>Politique de confidentialité</p>
           </a>
           <img src={logobw} alt="logo-company-black-white" />
