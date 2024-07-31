@@ -119,7 +119,8 @@
 .droite-footer a:hover,
 .gauche-footer a:hover,
 .droite-footer button:hover,
-.bas-footer p:hover {
+.bas-footer p:hover,
+.milieu-footer p:hover {
     color: blueviolet;
     cursor: pointer;
 }
