@@ -14,7 +14,7 @@
     color: black;
 }
 .Footer-ensemble, .Footer-ensemble * {
-    background-color: white !important;
+    background-color: rgb(249, 250, 220) !important;
 }
 
 .gauche-footer, .droite-footer, .bas-footer {
@@ -30,11 +30,12 @@
     line-height: 2.18em;
 }
 .gauche-footer p {
-    margin: 0; /* Supprime la marge par défaut */
+    margin: 2.3%; /* Supprime la marge par défaut */
     color: black; /* Changez la couleur selon votre design */
     font-size: 1.2rem; /* Augmente la taille du texte */
     font-weight: bold; /* Met en gras le texte */
     text-align: center; /* Aligne le texte à droite */
+    
 }
 
 .droite-footer {
@@ -58,8 +59,15 @@
     font-weight: bold; /* Met en gras le texte */
     text-align: center; /* Aligne le texte à droite */
 }
-.droite-footer input, button:hover{
+.droite-footer input:hover,
+.droite-footer p:hover,
+.droite-footer input:active,
+.droite-footer a:hover,
+.gauche-footer a:hover,
+.droite-footer button:hover,
+.bas-footer p:hover {
     color: blueviolet;
+    cursor: pointer;
 }
 
 .News--form {
@@ -68,9 +76,6 @@
     align-items: center; /* Centre les éléments verticalement */
     height: 100%; /* Assure que le conteneur prend toute la hauteur disponible */
     color: black; /* Changez la couleur selon votre design */
-}
-.News--form:active {
-
 }
 
 
@@ -98,7 +103,12 @@
     color: black; /* Changez la couleur selon votre design */
 }
 
+
 .svg-footer-social .fa-svg-icon {
-    font-size: 2rem; /* Augmente la taille des icônes */
+    font-size: 4rem; /* Augmente la taille des icônes */
     padding: 0 10px; /* Ajoute un peu d'espace autour des icônes */
+    cursor: pointer
+}
+.fa:hover {
+    color: blueviolet; /* Change la couleur des icônes au survol */
 }

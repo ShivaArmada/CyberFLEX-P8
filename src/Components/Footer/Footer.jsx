@@ -23,7 +23,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="droite-footer">
-          <p>Horaires: 9h-12h / 14h-18h</p>
+          <a href="https://app.voxiplan.com/s/9991590578"><p>Horaires: 9h-12h / 14h-18h</p></a>
           <p>www.cyberflex.fr</p>
           <form className="News--form">
             <input
