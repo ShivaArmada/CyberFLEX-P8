@@ -38,18 +38,41 @@
     font-size: 1.2rem; /* Augmente la taille du texte */
     font-weight: bold; /* Met en gras le texte */
     text-align: center; /* Aligne le texte à droite */
-    
+}
+.gauche-footer p::after {
+    content: '';
+    display: block;
+    position: relative;
+    border-bottom: 2px solid blueviolet;
+    width: 80%; /* Cover 80% of the element's width */
+    height: 5px; /* Height of the border */
+    bottom: -7px; /* Position it 15px below the element */
+    left: 10%; /* Center the line horizontally */
+    pointer-events: none; /* Ensure it doesn't interfere with clicks */
+    box-sizing: border-box;
 }
 
 
 .milieu-footer {
     bottom: 50px;
     left: 33.33%; /* Positionne à la moitié du footer vers le bas */
-    padding-bottom: 25px ;
+    padding-bottom: 23px ;
     line-height: 2em;
 }
 .milieu-footer p {
     padding-bottom: 36px;
+}
+.milieu-footer p::after {
+    content: '';
+    display: block;
+    position: relative;
+    border-bottom: 2px solid blueviolet;
+    width: 80%; /* Cover 80% of the element's width */
+    height: 2px; /* Height of the border */
+    bottom: -160px; /* Position it 15px below the element */
+    left: 10%; /* Center the line horizontally */
+    pointer-events: none; /* Ensure it doesn't interfere with clicks */
+    box-sizing: border-box;
 }
 
 .milieu-footer img {
