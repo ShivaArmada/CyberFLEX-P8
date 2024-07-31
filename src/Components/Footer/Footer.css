@@ -58,12 +58,18 @@
     font-weight: bold; /* Met en gras le texte */
     text-align: center; /* Aligne le texte à droite */
 }
-form {
+.droite-footer input, button:hover{
+    color: blueviolet;
+}
+
+.News--form {
     display: flex; /* Correction : doit être 'flex' pour appliquer 'justify-content' */
     justify-content: center; /* Centre les éléments horizontalement */
     align-items: center; /* Centre les éléments verticalement */
     height: 100%; /* Assure que le conteneur prend toute la hauteur disponible */
     color: black; /* Changez la couleur selon votre design */
+}
+.News--form:active {
 
 }
 
@@ -82,9 +88,13 @@ form {
 
 .svg-footer-social {
     display: flex; /* Correction : doit être 'flex' pour appliquer 'justify-content' */
-    justify-content: space-around; /* Espacement entre les icônes */
+    gap: 25px;
+    justify-content: center; /* Espacement entre les icônes */
     align-items: center; /* Centre les icônes verticalement */
-    height: 100%; /* Assure que le conteneur prend toute la hauteur disponible */
+    height: 200%;
+    width: 100%;
+    font-size: 200%; /* Assure que le conteneur prend toute la hauteur disponible */
+    padding-top: 15px;
     color: black; /* Changez la couleur selon votre design */
 }
 

@@ -63,7 +63,7 @@ html, body {
   top: 0;
   left: 0;
 
-  svg {
+  .svg--xmlns {
     display: none;
   }
 

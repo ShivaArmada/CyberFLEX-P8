@@ -33,7 +33,7 @@ const AppWrapper = ({ children }) => {
 
   return (
     <div className="gradient-bg">
-      <svg xmlns="http://www.w3.org/2000/svg">
+      <svg xmlns="http://www.w3.org/2000/svg" className="svg--xmlns">
         <defs>
           <filter id="goo">
             <feGaussianBlur
