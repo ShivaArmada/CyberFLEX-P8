@@ -45,9 +45,11 @@
 .milieu-footer {
     bottom: 50px;
     left: 33.33%; /* Positionne à la moitié du footer vers le bas */
-    
     padding-bottom: 25px ;
     line-height: 2em;
+}
+.milieu-footer p {
+    padding-bottom: 36px;
 }
 
 .milieu-footer img {
@@ -55,7 +57,10 @@
     z-index: -2; /* Place l'image derrière les autres éléments */
     margin: 0 auto; /* Centre l'image horizontalement */
     display: block; /* Permet de centrer l'image */
-    padding-top: 36px;
+}
+.milieu-footer img:hover {
+    transform: scale(1.2); 
+    transition: transform 0.5s; /* Ajoute une transition au zoom */
 }
 
 .milieu-footer a {
