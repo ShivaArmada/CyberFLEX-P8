@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         <div className="bas-footer">
-          <p>© 2024 - Tout droits réservés</p>
+          <p><span id="copyright">©</span> 2024 - Tout droits réservés</p>
         </div>
       </div>
     </footer>

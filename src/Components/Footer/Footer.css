@@ -15,19 +15,23 @@
 }
 .Footer-ensemble, .Footer-ensemble * {
     background-color: rgb(249, 250, 220) !important;
+    font-family:'Urbanist', sans-serif;
+    height: 264,26px;
 }
 
 .gauche-footer, .droite-footer, .bas-footer {
     position: absolute;
     width: 50%; /* Divise l'espace en deux pour gauche et droite */
+    height: relative;
 }
+
 
 .gauche-footer {
     left: 0;
     bottom: 50px; /* Positionne à la moitié du footer vers le bas */
-    padding-top: 25px ;
     padding-bottom: 25px ;
     line-height: 2.18em;
+    height: 178px;
 }
 .gauche-footer p {
     margin: 2.3%; /* Supprime la marge par défaut */
@@ -74,7 +78,6 @@
     display: flex; /* Correction : doit être 'flex' pour appliquer 'justify-content' */
     justify-content: center; /* Centre les éléments horizontalement */
     align-items: center; /* Centre les éléments verticalement */
-    height: 100%; /* Assure que le conteneur prend toute la hauteur disponible */
     color: black; /* Changez la couleur selon votre design */
 }
 
@@ -89,6 +92,10 @@
     font-size: 1.2rem; /* Augmente la taille du texte */
     font-weight: bold; /* Met en gras le texte */
     z-index: -1; /* Place le texte derrière les autres éléments */
+}
+
+#copyright {
+    bottom : 50%
 }
 
 .svg-footer-social {
