@@ -25,7 +25,7 @@ const Footer = () => {
             </a>
           </p>
           <p>
-            <a href="tel:+33641874389">06 41 87 43 89</a>
+            <a href="tel:+33641874389" >06 41 87 43 89</a>
           </p>
           <p>
             <a href="mailto:shiva@cyberflex.fr">shiva@cyberflex.fr</a>
@@ -56,16 +56,16 @@ const Footer = () => {
             </button>
           </form>
           <span className="svg-footer-social">
-            <a href="https://www.facebook.com/profile.php?id=61563887240558">
+            <a href="https://www.facebook.com/profile.php?id=61563887240558" target="blank">
               <FontAwesomeIcon icon={faSquareFacebook} />
             </a>
-            <a href="https://x.com/ArmadaShiva">
+            <a href="https://x.com/ArmadaShiva" target="blank">
               <FontAwesomeIcon icon={faSquareTwitter} />
             </a>
-            <a href="https://www.linkedin.com/in/cyberflex/">
+            <a href="https://www.linkedin.com/in/cyberflex/" target="blank">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href="https://github.com/ShivaArmada">
+            <a href="https://github.com/ShivaArmada" target="blank">
               <FontAwesomeIcon icon={faSquareGithub} />
             </a>
           </span>

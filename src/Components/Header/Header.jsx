@@ -15,7 +15,8 @@ const Header = () => {
             {menuVisible ? (
                 <button className="cross" onClick={toggleMenu}>&#735;</button>
             ) : (
-                <button className="hamburger" onClick={toggleMenu}>&#9776;</button>
+                <button className="hamburger--menu" onClick={toggleMenu}>MENU</button>
+                
             )}
             {menuVisible && (
                 <div className={`menu ${menuVisible ? 'menuVisible' : ''}`}>
