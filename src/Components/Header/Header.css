@@ -34,23 +34,22 @@ position: absolute;
   z-index:10000000000000;
 }
 /* <button className="hamburger--menu" onClick={toggleMenu}>&#9776;</button> pour téléphone*/
-.hamburger--menu{
-  background:none;
-  position:absolute;
-  top:0;
-  right:15px;
-  line-height:45px;
-  padding:5px 15px 0px 15px;
-  
-  color:black;
+.hamburger--menu {
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  line-height: 45px;
+  padding: 5px 15px 0px 15px;
+  border: 2px solid black; /* Ajout de la bordure de 2px en noir */
+  color: black;
   background-color: rgb(249, 250, 220);
   border-radius: 15%;
-  border:0;
-  font-size:2.6em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
+  font-size: 2.6em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
 }
 .hamburger--menu:hover{
   color: blueviolet;
