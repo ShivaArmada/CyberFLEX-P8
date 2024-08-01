@@ -33,7 +33,7 @@ position: absolute;
   outline:none;
   z-index:10000000000000;
 }
-/* <button className="hamburger--menu" onClick={toggleMenu}>&#9776;</button> pour téléphone*/
+/* <button className="hamburger" onClick={toggleMenu}>&#9776;</button> pour téléphone*/
 .hamburger--menu {
   background: none;
   position: absolute;
