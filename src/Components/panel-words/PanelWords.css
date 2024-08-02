@@ -36,3 +36,12 @@
   z-index: 10000;
   padding: 20px;
 }
+
+@media (max-width: 440px) {
+  .intro--panel {
+    width: 100%; /* Définir une largeur fixe */
+    height: 200px; /* Définir une hauteur automatique */
+    padding: 20px; /* Ajouter un padding fixe */
+    box-sizing: border-box; /* Inclure le padding dans la largeur et la hauteur */
+  }
+}

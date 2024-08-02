@@ -34,6 +34,7 @@ header{
   cursor:pointer;
   outline:none;
   z-index:10000000000000;
+  display: none;
 }
 /* <button className="hamburger" onClick={toggleMenu}>&#9776;</button> pour téléphone*/
 .hamburger--menu {
@@ -153,4 +154,18 @@ header{
   
   .menuVisible {
     animation: slideInFromRight 1.5s forwards cubic-bezier(0.32, 0.64, 0.45, 1);
+  }
+
+  @media (max-width: 440px) {
+
+    
+    .hamburger {
+      display: flex;
+    }
+    .hamburger--menu {
+      display: none;
+    }
+    .menu li {
+      font-size: 2em;
+    }
   }

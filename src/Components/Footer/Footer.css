@@ -94,8 +94,9 @@ html, body {
     }
   }
   
-img:hover {
-    animation: slideup 0.6s ease;
+  .milieu-footer img:hover {
+    transition: transform 0.6s ease;
+    transform: scale(1.2);
   }
   
   .milieu-footer a {
@@ -155,11 +156,7 @@ img:hover {
     align-items: center;
     color: black;
   }
-  @media (max-width: 440px) {
-    .News--form {
-      flex-direction: column;
-    }
-    }
+  
 
   
   .bas-footer {
@@ -205,5 +202,12 @@ img:hover {
   
   .fa:hover {
     color: blueviolet;
+  }
+
+  @media (max-width: 440px) {
+    .News--form {
+      flex-direction: column;
+    }
+
   }
   
