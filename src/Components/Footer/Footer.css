@@ -155,7 +155,7 @@ img:hover {
     align-items: center;
     color: black;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     .News--form {
       flex-direction: column;
     }
