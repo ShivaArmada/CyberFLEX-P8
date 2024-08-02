@@ -1,23 +1,24 @@
-@keyframes slideInFromLeft {
+@keyframes fadeIn {
   0% {
-    transform: translateX(-100%);
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
     opacity: 1;
   }
 }
-
-
 
 .intro--message {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 4em; /* Augmenter la taille du texte pour plus de visibilité */
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-  background: linear-gradient(90deg, violet, yellow, pink);/* Utiliser les couleurs complémentaires */
+  animation: fadeIn 1s ease-in-out;
+  background: linear-gradient(
+    90deg,
+    violet,
+    yellow,
+    pink
+  ); /* Utiliser les couleurs complémentaires */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -27,15 +28,11 @@
   height: 100%;
 }
 
-
-
-
 .intro--panel {
   display: flex;
-  position: relative ;
+  position: relative;
   transition: opacity 0.5s ease-in-out;
   opacity: 1;
   z-index: 10000;
-padding: 20px;
-
+  padding: 20px;
 }
