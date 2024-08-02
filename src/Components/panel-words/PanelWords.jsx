@@ -31,7 +31,7 @@ const PanelWords = () => {
           setIsPaused(true);
         }
       } else {
-        if (currentMessage.length > 0) {
+        if (currentMessage.length > 4) {
           timeout = setTimeout(() => {
             setCurrentMessage(messages[currentMessageIndex].slice(0, currentMessage.length - 1));
           }, 50);
