@@ -1,20 +1,26 @@
 import React from "react";
 import "./Whoami.css";
-// import Carousel from "./Carousel"; // Assurez-vous que le chemin est correct
+import Carousel from "./Carousel";
+import HTML5 from "../../Assets/Devicons/HTML.png";
+import CSS3 from "../../Assets/Devicons/CSS.png";
+import JavaScript from "../../Assets/Devicons/JS.png";
+import ReactLogo from "../../Assets/Devicons/React.png";
+import Node from "../../Assets/Devicons/Node.png";
+import Express from "../../Assets/Devicons/Express.png";
+import MongoDB from "../../Assets/Devicons/MANGODB.png";
+import Github from "../../Assets/Devicons/GitHubA.png";
 
 const Whoami = () => {
-/*
-const items = [
-  { id: 1, src: "path/to/html5.png", alt: "HTML5" },
-  { id: 2, src: "path/to/css3.png", alt: "CSS3" },
-  { id: 3, src: "path/to/javascript.png", alt: "JavaScript" },
-  { id: 4, src: "path/to/react.png", alt: "React" },
-  { id: 5, src: "path/to/nodejs.png", alt: "Node.js" },
-  { id: 6, src: "path/to/express.png", alt: "Express" },
-  { id: 7, src: "path/to/mongodb.png", alt: "MongoDB" },
-  { id: 8, src: "path/to/git.png", alt: "Git" },
-];
-*/
+  const items = [
+    { id: 1, src: HTML5, alt: "HTML5" },
+    { id: 2, src: CSS3, alt: "CSS3" },
+    { id: 3, src: JavaScript, alt: "JavaScript" },
+    { id: 4, src: ReactLogo, alt: "React" },
+    { id: 5, src: Node, alt: "Node.js" },
+    { id: 6, src: Express, alt: "Express" },
+    { id: 7, src: MongoDB, alt: "MongoDB" },
+    { id: 8, src: Github, alt: "Github actions" },
+  ];
 
   return (
     <>
@@ -30,9 +36,8 @@ const items = [
           le développement web.
         </p>
       </div>
-      <div className="whoami">
-        <h2>Compétences</h2>
-        {/* <Carousel items={items} active={0} /> */}
+      <div className="whoami whoami--carousel">
+        <Carousel items={items} active={0} />
       </div>
     </>
   );

@@ -50,3 +50,13 @@ h1:hover {
     justify-content: center;
     align-items: center;
 }
+.whoami--carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
