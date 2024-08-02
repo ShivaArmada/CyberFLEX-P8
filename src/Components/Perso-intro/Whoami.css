@@ -1,0 +1,15 @@
+.whoami {
+    display: flex; /* Utilisation de flex pour centrer les éléments enfants */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -250%); /* Ajustement pour centrer l'élément */
+    flex-direction: column; /* Disposition des enfants en colonne */
+    align-items: center; /* Centrage horizontal des enfants */
+    justify-content: center; /* Centrage vertical des enfants */
+    border: 2px solid black;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10000000000005;
+}

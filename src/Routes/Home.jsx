@@ -3,6 +3,7 @@ import AppWrapper from "../BlocWrapper/block"; // Assurez-vous que le chemin est
 import "../Styles/Home.css";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
+import Whoami from "../Components/Perso-intro/Whoami";  
 
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
     <AppWrapper>
       <div className="App">
         < Header />
+        < Whoami />
         < Footer />
       </div>
     </AppWrapper>

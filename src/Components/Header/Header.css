@@ -41,7 +41,7 @@ position: absolute;
   right: 15px;
   line-height: 45px;
   padding: 5px 15px 0px 15px;
-  border: 2px solid black; /* Ajout de la bordure de 2px en noir */
+  border: 4px solid black; /* Ajout de la bordure de 2px en noir */
   color: black;
   background-color: rgb(249, 250, 220);
   border-radius: 15%;
