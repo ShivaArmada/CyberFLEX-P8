@@ -13,9 +13,21 @@
     text-decoration: none;
     color: black;
 }
+@keyframes slideUp {
+    from {
+        transform: translateY(150%);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .Footer-ensemble, .Footer-ensemble * {
     background-color: rgb(249, 250, 220) !important;
-    font-family:'Urbanist', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+    animation: slideUp 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .gauche-footer, .droite-footer,.milieu-footer, .bas-footer {
@@ -143,6 +155,7 @@
 
 
 .bas-footer {
+    
     left: 0;
     right: 0;
     bottom: 0;
