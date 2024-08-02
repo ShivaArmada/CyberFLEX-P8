@@ -1,200 +1,203 @@
-.Footer-ensemble {
-    position: absolute;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    flex: 1;
+    position: relative;
+    min-height: 100vh; /* Assurez-vous que le conteneur parent prend toute la hauteur de la page */
+
+    /* other styling for main content */
+  }
+  
+  .Footer-ensemble {
+    position: relative;
+    margin-top: 35px;
     bottom: 0;
     width: 100%;
-    max-height: 4%;
     display: flex;
-    z-index: 1000;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.Footer-ensemble a {
-    text-decoration: none;
-    color: black;
-}
-@keyframes slideUp {
-    from {
-        transform: translateY(150%);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.Footer-ensemble, .Footer-ensemble * {
     background-color: rgb(249, 250, 220) !important;
     font-family: 'Urbanist', sans-serif;
-    animation: slideUp 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation: slideUp 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
+    align-items: center;
+    z-index: 1000; /* Assurez-vous que le footer soit au-dessus des autres éléments */
 }
+  .Footer-ensemble a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(150%);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+.droite-footer, .milieu-footer, .bas-footer {
+    width: 33.33%; /* Divide space into thirds */
+    height: auto; /* Adjust height as needed */
+  }
+  
+  
+  .milieu-footer {
 
-.gauche-footer, .droite-footer,.milieu-footer, .bas-footer {
-    position: absolute;
-    width: 33.33%; /* Divise l'espace en deux pour gauche et droite */
-    height: relative;
-}
-
-
-.gauche-footer {
-    left: 0;
-    bottom: 50px; /* Positionne à la moitié du footer vers le bas */
-    padding-bottom: 25px ;
-    line-height: 2.18em;
-    height: 178px;
-}
-.gauche-footer p {
-    margin: 2.3%; /* Supprime la marge par défaut */
-    color: black; /* Changez la couleur selon votre design */
-    font-size: 1.2rem; /* Augmente la taille du texte */
-    font-weight: bold; /* Met en gras le texte */
-    text-align: center; /* Aligne le texte à droite */
-}
-.gauche-footer p::after {
-    content: '';
-    display: block;
-    position: relative;
-    border-bottom: 2px solid blueviolet;
-    width: 80%; /* Cover 80% of the element's width */
-    height: 5px; /* Height of the border */
-    bottom: -7px; /* Position it 15px below the element */
-    left: 10%; /* Center the line horizontally */
-    pointer-events: none; /* Ensure it doesn't interfere with clicks */
-    box-sizing: border-box;
-}
-
-
-.milieu-footer {
-    bottom: 50px;
-    left: 33.33%; /* Positionne à la moitié du footer vers le bas */
-    padding-bottom: 23px ;
+    padding-bottom: 23px;
     line-height: 2em;
-}
-.milieu-footer p {
-    padding-bottom: 36px;
-}
-.milieu-footer p::after {
+  }
+  
+  
+  .milieu-footer img::after {
     content: '';
     display: block;
     position: relative;
     border-bottom: 2px solid blueviolet;
-    width: 80%; /* Cover 80% of the element's width */
-    height: 2px; /* Height of the border */
-    bottom: -160px; /* Position it 15px below the element */
-    left: 10%; /* Center the line horizontally */
-    pointer-events: none; /* Ensure it doesn't interfere with clicks */
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    top: 10px; /* Ajustez cette valeur selon vos besoins */
+    pointer-events: none;
     box-sizing: border-box;
 }
 
 .milieu-footer img {
-    max-width: 100px; /* Adjust size as needed */
-    z-index: -2; /* Place l'image derrière les autres éléments */
-    margin: 0 auto; /* Centre l'image horizontalement */
-    display: block; /* Permet de centrer l'image */
+    max-width: 100px;
+    z-index: -2;
+    margin: 0 auto;
+    display: block;
+    padding-top: 15px;
+    position: relative; /* Assurez-vous que l'image est positionnée relativement pour que ::after fonctionne correctement */
 }
-.milieu-footer img:hover {
-    transform: scale(1.2); 
-    transition: transform 0.5s; /* Ajoute une transition au zoom */
-}
-
-.milieu-footer a {
-    display: block; /* Ensure the link takes up full width */
-    margin-top: 10px; /* Add some space above the link */
-}
-
-.droite-footer {
-    right: 0px;
-    bottom: 50px; /* Positionne à la moitié du footer vers le bas */
-    padding-top: 25px ;
-    padding-bottom: 25px ;
+  
+@keyframes slideup {
+    0% {
+      opacity: 1;
+      transform: translateY(150%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+img:hover {
+    animation: slideup 0.6s ease;
+  }
+  
+  .milieu-footer a {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .droite-footer {
+    right: 0;
+    bottom: 50px;
     line-height: 2em;
-}
-.droite-footer p,
-.milieu-footer p {
-    margin: 0; /* Supprime la marge par défaut */
-    color: black; /* Changez la couleur selon votre design */
-    font-size: 1.2rem; /* Augmente la taille du texte */
-    font-weight: bold; /* Met en gras le texte */
-    text-align: center; /* Aligne le texte à droite */
-}
-.droite-footer input, button {
-    margin-top: 10px; /* Ajoute un peu d'espace en haut des éléments */
-    color: black; /* Changez la couleur selon votre design */
-    font-size: 1.33rem; /* Augmente la taille du texte */
-    font-weight: bold; /* Met en gras le texte */
-    text-align: center; /* Aligne le texte à droite */
-}
-.droite-footer input:hover,
-.droite-footer p:hover,
-.droite-footer input:active,
-.droite-footer a:hover,
-.gauche-footer a:hover,
-.droite-footer button:hover,
-.bas-footer p:hover,
-.milieu-footer p:hover {
+  }
+  
+  .droite-footer p,
+  .milieu-footer p {
+    margin: 0;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .droite-footer input, button {
+    margin-top: 10px;
+    color: black;
+    font-size: 1.33rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .droite-footer input:hover,
+  .droite-footer p:hover,
+  .droite-footer input:active,
+  .droite-footer input:focus,
+  .droite-footer a:hover,
+  .gauche-footer a:hover,
+  .droite-footer button:hover,
+  .bas-footer p:hover,
+  .milieu-footer p:hover {
     color: blueviolet;
     cursor: pointer;
-}
-
-
-.droite-footer button:hover,
-.droite-footer button:active,
-.droite-footer p:hover,
-.droite-footer a:hover,
-.gauche-footer p:hover {
+  }
+  
+  .droite-footer button:hover,
+  .droite-footer button:active,
+  .droite-footer p:hover,
+  .droite-footer a:hover,
+  .gauche-footer p:hover,
+  .milieu-footer img:hover {
     transition: transform 0.6s ease;
     transform: scale(1.2);
-}
-.News--form {
-    display: flex; /* Correction : doit être 'flex' pour appliquer 'justify-content' */
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Centre les éléments verticalement */
-    color: black; /* Changez la couleur selon votre design */
-}
-
-
-.bas-footer {
-    
+  }
+  
+  .News--form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  
+  .bas-footer {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%; /* Prend toute la largeur disponible */
-    text-align: center; /* Centre le texte dans la partie basse */
-    color: black; /* Changez la couleur selon votre design */
-    font-size: 1.2rem; /* Augmente la taille du texte */
-    font-weight: bold; /* Met en gras le texte */
-    z-index: -1; /* Place le texte derrière les autres éléments */
-}
-.bas-footer p {
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .bas-footer p {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centre verticalement le texte et le logo */
-}
-
-#copyright {
-    margin-bottom: 3px; 
-    margin-right: 5px; /* Ajustez la valeur selon vos besoins */
-    font-size: 1.2rem; /* Ajustez la valeur selon vos besoins */}
-
-.svg-footer-social {
-    display: flex; /* Correction : doit être 'flex' pour appliquer 'justify-content' */
+    justify-content: center;
+  }
+  
+  #copyright {
+    margin-bottom: 3px;
+    margin-right: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .svg-footer-social {
+    display: flex;
     gap: 25px;
-    justify-content: center; /* Espacement entre les icônes */
-    align-items: center; /* Centre les icônes verticalement */
+    justify-content: center;
+    align-items: center;
     height: 200%;
     width: 100%;
-    font-size: 200%; /* Assure que le conteneur prend toute la hauteur disponible */
+    font-size: 200%;
     padding-top: 15px;
-    color: black; /* Changez la couleur selon votre design */
-}
-
-
-.svg-footer-social .fa-svg-icon {
-    font-size: 4rem; /* Augmente la taille des icônes */
-    padding: 0 10px; /* Ajoute un peu d'espace autour des icônes */
-    cursor: pointer
-}
-.fa:hover {
-    color: blueviolet; /* Change la couleur des icônes au survol */
-}
+    color: black;
+  }
+  
+  .svg-footer-social .fa-svg-icon {
+    font-size: 4rem;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+  
+  .fa:hover {
+    color: blueviolet;
+  }
+  

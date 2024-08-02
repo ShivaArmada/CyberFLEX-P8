@@ -1,46 +1,52 @@
 .whoami {
-    display: block; /* Utilisation de flex pour centrer les éléments enfants */
+    display: flex; /* Utilisation de flex pour centrer les éléments enfants */
     flex-direction: column; /* Disposition des enfants en colonne */
     align-items: center; /* Centrage horizontal des enfants */
     justify-content: center; /* Centrage vertical des enfants */
     border: 2px solid blueviolet;
     padding: 20px;
+    margin-top: 50px;
     background-color: rgb(249, 250, 220);
-    background-color: rgb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    position: relative; /* Pour que le ::before fonctionne correctement */
+    margin-left: auto; /* Centrage horizontal */
+    margin-right: auto; /* Centrage horizontal */
+    width: fit-content; /* Ajuste la largeur de l'élément au contenu */
 }
 .whoami:hover {
     background-color: rgb(249, 250, 220);
-    background-color: rgb;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 2;
     transition: transform 0.6s ease;
-    transform: scale(0.99);
+    transform: scale(0.98);
 }
+
 .whoami:not(:hover) {
     transition: transform 0.6s ease;
     transform: scale(1);
 }
 
 .whoami::before {
+    display: none;
     content: '';
     position: absolute;
     top: 8px; /* Position verticale du trou (ajusté pour être sur la bordure) */
     left: -2px; /* Position horizontale du trou */
     width: 2px; /* Largeur du trou */
     height: 50px; /* Hauteur du trou */
-    background-color: blueviolet; /* Couleur de fond pour masquer la bordure */
+    background-color: rgb(249, 250, 220); /* Couleur de fond pour masquer la bordure */
     z-index: 1; /* Assurez-vous que le trou est au-dessus de la bordure */
 }
+
 h1:hover {
     color: blueviolet;
-    }
-
+}
 
 .whoami--intro {
-    position: absolute;
-    top: 45%;
-    left: 10%;
+    position: relative;
     width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

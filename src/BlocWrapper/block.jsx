@@ -2,8 +2,7 @@
 import React, { useEffect } from "react";
 import "./block.css"; // Assurez-vous que le chemin est correct
 
-const AppWrapper = ({ children }) => {
-  // Ajout de la prise en charge des enfants ici
+const GradientBackground = () => {
   useEffect(() => {
     // La logique pour le mouvement de l'élément interactif
     const interBubble = document.querySelector(".interactive");
@@ -59,10 +58,8 @@ const AppWrapper = ({ children }) => {
         <div className="g5"></div>
         <div className="interactive"></div>
       </div>
-      {/* Rendu des enfants passés à AppWrapper */}
-      {children}
     </div>
   );
 };
 
-export default AppWrapper;
+export default GradientBackground;

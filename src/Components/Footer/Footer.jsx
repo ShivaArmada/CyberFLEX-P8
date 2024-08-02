@@ -15,26 +15,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="Footer-ensemble">
-        <div className="gauche-footer">
-          <p>
-            <a
-              href="https://www.google.fr/maps/place/62960+Ligny-l%C3%A8s-Aire/@50.5633199,2.3001982,13z/data=!3m1!4b1!4m6!3m5!1s0x47dd040e08689957:0x40af13e8163e590!8m2!3d50.559358!4d2.350408!16s%2Fm%2F02z7gby?entry=ttu"
-              target="blank"
-            >
-              4 impasse de vignacourt / Ligny-lès-aires
-            </a>
-          </p>
-          <p>
-            <a href="tel:+33641874389" >06 41 87 43 89</a>
-          </p>
-          <p>
-            <a href="mailto:shiva@cyberflex.fr">shiva@cyberflex.fr</a>
-          </p>
-        </div>
         <div className="milieu-footer">
-          <a href="/mentions">
-            <p>Politique de confidentialité</p>
-          </a>
           <img src={logobw} alt="logo-company-black-white" />
         </div>
         <div className="droite-footer">

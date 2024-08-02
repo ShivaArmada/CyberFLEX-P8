@@ -1,0 +1,63 @@
+#carousel {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Ajustez selon vos besoins */
+  overflow: hidden;
+}
+
+.item {
+  position: absolute;
+  transition: transform 0.5s;
+}
+
+.level0 {
+  transform: scale(1);
+  z-index: 5;
+}
+
+.level1, .level-1 {
+  transform: scale(0.8);
+  z-index: 4;
+}
+
+.level2, .level-2 {
+  transform: scale(0.6);
+  z-index: 3;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.carousel-item-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.carousel-item-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.carousel-item-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel-item-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 500ms, transform 500ms;
+}

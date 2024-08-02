@@ -17,11 +17,14 @@
   align-items: center;
   font-size: 4em; /* Augmenter la taille du texte pour plus de visibilité */
   animation: 1s ease-out 0s 1 slideInFromLeft;
-  background: linear-gradient(90deg, orange, lightblue); /* Utiliser les couleurs complémentaires */
+  background: linear-gradient(90deg, violet, yellow, pink);/* Utiliser les couleurs complémentaires */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative; /* Nécessaire pour le curseur clignotant */
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -29,10 +32,10 @@
 
 .intro--panel {
   display: flex;
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative ;
   transition: opacity 0.5s ease-in-out;
   opacity: 1;
+  z-index: 10000;
+padding: 20px;
+
 }
