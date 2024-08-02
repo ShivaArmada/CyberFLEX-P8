@@ -33,6 +33,9 @@
     background-color: blueviolet; /* Couleur de fond pour masquer la bordure */
     z-index: 1; /* Assurez-vous que le trou est au-dessus de la bordure */
 }
+h1:hover {
+    color: blueviolet;
+    }
 
 
 .whoami--intro {
