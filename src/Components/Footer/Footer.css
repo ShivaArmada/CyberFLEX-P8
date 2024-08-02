@@ -155,6 +155,12 @@ img:hover {
     align-items: center;
     color: black;
   }
+  @media (max-width: 370px) {
+    .News--form {
+      flex-direction: column;
+    }
+    }
+
   
   .bas-footer {
     left: 0;
