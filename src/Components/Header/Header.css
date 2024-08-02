@@ -156,7 +156,18 @@ header{
     animation: slideInFromRight 1.5s forwards cubic-bezier(0.32, 0.64, 0.45, 1);
   }
 
+@media (max-width: 636px) {
+  .Logo-Company {
+    width: 20%;
+  }
+}
+
+
   @media (max-width: 440px) {
+
+    .Logo-Company {
+      width: 30%;
+    }
 
     
     .hamburger {
