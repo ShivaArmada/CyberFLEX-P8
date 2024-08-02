@@ -4,6 +4,7 @@ import "../Styles/Home.css";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 import Whoami from "../Components/Perso-intro/Whoami";  
+import PanelWords from "../Components/panel-words/PanelWords";
 
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
     <AppWrapper>
       <div className="App">
         < Header />
+        < PanelWords />
         < Whoami />
         < Footer />
       </div>

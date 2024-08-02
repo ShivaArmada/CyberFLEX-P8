@@ -1,15 +1,31 @@
 .whoami {
-    display: flex; /* Utilisation de flex pour centrer les éléments enfants */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -250%); /* Ajustement pour centrer l'élément */
+    display: block; /* Utilisation de flex pour centrer les éléments enfants */
     flex-direction: column; /* Disposition des enfants en colonne */
     align-items: center; /* Centrage horizontal des enfants */
     justify-content: center; /* Centrage vertical des enfants */
     border: 2px solid black;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(249, 250, 220);
+    background-color: rgb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10000000000005;
+    z-index: 1;
+}
+
+.whoami::before {
+    content: '';
+    position: absolute;
+    top: 8px; /* Position verticale du trou (ajusté pour être sur la bordure) */
+    left: -2px; /* Position horizontale du trou */
+    width: 2px; /* Largeur du trou */
+    height: 50px; /* Hauteur du trou */
+    background-color: black; /* Couleur de fond pour masquer la bordure */
+    z-index: 1; /* Assurez-vous que le trou est au-dessus de la bordure */
+}
+
+
+.whoami--intro {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    width: 80%;
 }

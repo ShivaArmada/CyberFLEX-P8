@@ -125,6 +125,15 @@
     cursor: pointer;
 }
 
+
+.droite-footer button:hover,
+.droite-footer button:active,
+.droite-footer p:hover,
+.droite-footer a:hover,
+.gauche-footer p:hover {
+    transition: transform 0.6s ease;
+    transform: scale(1.2);
+}
 .News--form {
     display: flex; /* Correction : doit être 'flex' pour appliquer 'justify-content' */
     justify-content: center; /* Centre les éléments horizontalement */
