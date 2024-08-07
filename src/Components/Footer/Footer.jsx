@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSquareFacebook,
@@ -11,6 +11,24 @@ import logobw from "../../Assets/bwlogo.png";
 
 const Footer = () => {
   const [placeholder, setPlaceholder] = useState("Votre adresse e-mail");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer = document.querySelector('.Footer-ensemble');
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const threshold = document.body.offsetHeight - 100; // Ajustez cette valeur selon vos besoins
+
+      if (scrollPosition >= threshold) {
+        footer.classList.add('slide-up');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <footer>

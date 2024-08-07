@@ -43,14 +43,14 @@ class Carousel extends React.Component {
 
   moveLeft() {
     this.setState((prevState) => ({
-      active: (prevState.active - 1 + prevState.items.length) % prevState.items.length,
+      active: (prevState.active + 1 + prevState.items.length) % prevState.items.length,
       direction: "left",
     }));
   }
-
+  
   moveRight() {
     this.setState((prevState) => ({
-      active: (prevState.active + 1) % prevState.items.length,
+      active: (prevState.active - 1 + prevState.items.length) % prevState.items.length,
       direction: "right",
     }));
   }

@@ -58,5 +58,7 @@ h1:hover {
     width: 50%;
     height: 250px;
     overflow: hidden;
-    background-color: #f0f0f0;
+}
+.whoami--carousel:hover {
+    background-color: white;
 }
