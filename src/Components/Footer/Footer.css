@@ -40,7 +40,7 @@ html, body {
 }
 
 .Footer-ensemble.slide-up {
-    animation: slideUp 0.9s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation: slideUp 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 @keyframes slideUp {
@@ -88,17 +88,7 @@ html, body {
     padding-top: 15px;
     position: relative; /* Assurez-vous que l'image est positionnée relativement pour que ::after fonctionne correctement */
 }
-  
-@keyframes slideup {
-    0% {
-      opacity: 1;
-      transform: translateY(150%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+
   
   .milieu-footer img:hover {
     transition: transform 0.6s ease;
