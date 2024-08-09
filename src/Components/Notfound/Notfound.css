@@ -4,11 +4,18 @@
   align-items: center;
 }
 .Logo-Notfound img {
-  width: 80%;
-  height: 855px;
-  margin: 10%;
-  margin-top: 7%;
+  width: 70%;
+  height: 920px;
+  margin-left: 20%;
+  margin-right: 10%;
 }
+
+@media (max-height: 906px) {
+  .Logo-Notfound img {
+    height: 900px;
+  }
+}
+
 
 @media (max-width: 440px) {
   .Logo-Notfound img {
