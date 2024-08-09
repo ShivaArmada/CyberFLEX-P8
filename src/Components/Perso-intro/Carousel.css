@@ -72,8 +72,8 @@
 
 .carousel.left .carousel-item-enter-active {
   opacity: 1;
-  transform: translateX(0);
-  transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+  transform: translateX(-100%);
+  transition: opacity 1000ms ease-in, transform 1000ms ease-out;
 }
 
 .carousel.left .carousel-item-exit {
@@ -83,8 +83,8 @@
 
 .carousel.left .carousel-item-exit-active {
   opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+  transform: translateX(-180%);
+  transition: opacity 1000ms ease-in, transform 1000ms ease-out;
 }
 
 .carousel.right .carousel-item-enter {
@@ -94,17 +94,18 @@
 
 .carousel.right .carousel-item-enter-active {
   opacity: 1;
-  transform: translateX(0);
-  transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+  transform: translateX(100%);
+  transition: opacity 1000ms ease-in, transform 1000ms ease-out;
 }
 
 .carousel.right .carousel-item-exit {
   opacity: 1;
   transform: translateX(0);
+  
 }
 
 .carousel.right .carousel-item-exit-active {
   opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+  transform: translateX(180%);
+  transition: opacity 1000ms ease-in, transform 1000ms ease-out;
 }
