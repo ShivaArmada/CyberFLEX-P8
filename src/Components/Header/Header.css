@@ -14,11 +14,14 @@ header{
   width: 10%;
   height: auto;
   display: block;
-
+  transition: transform 1.4s ease;
   z-index: 1; /* Assurez-vous que le logo est au-dessus des autres éléments */
 }
 .Logo-Company:hover{
   transform: scale(1.2);
+}
+.Logo-Company:not(:hover){
+  transform: scale(1);
 }
 .hamburger{
   background:none;
