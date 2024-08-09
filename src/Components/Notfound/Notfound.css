@@ -1,0 +1,17 @@
+.Logo-Notfound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Logo-Notfound img {
+  width: 80%;
+  height: auto;
+  margin: 10%;
+  margin-top: 7%;
+}
+
+@media (max-width: 440px) {
+  .Logo-Notfound img {
+width: 60%;
+  }
+}
