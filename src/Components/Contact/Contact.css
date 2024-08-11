@@ -96,10 +96,15 @@ fieldset {
 .contact--textarea {
     width: 100%;
     margin-bottom: 15px;
+    
 }
 
 .contact--textarea textarea {
-    width: 80%;
+    width: 100%; /* Pour s'assurer qu'il ne déborde pas */
+    max-width: 100%; /* Empêche le textarea de dépasser le conteneur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    resize: vertical; 
+    min-height: 80px;
 }
 
 .contact--form input,
@@ -126,7 +131,6 @@ fieldset {
 }
 
 .contact--confirmation {
-    display: flex;
     font-family: 'Urbanist', sans-serif;
     font-size: 1em;
     text-align: center;
@@ -144,4 +148,15 @@ input[type="checkbox"]:checked {
     background-color: blueviolet;
     color: blueviolet;
     border-color: blueviolet;
+}
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+    color: blueviolet;
+}
+
+fieldset {
+width: 80%;
 }
