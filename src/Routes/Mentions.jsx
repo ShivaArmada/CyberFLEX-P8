@@ -4,7 +4,7 @@ import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 
 
-function Tarif() {
+function Mentions() {
     return (
       <div className="container">
         <GradientBackground />
@@ -16,4 +16,4 @@ function Tarif() {
     );
   }
 
-export default Tarif;
+export default Mentions;
