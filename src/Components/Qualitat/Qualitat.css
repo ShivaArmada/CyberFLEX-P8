@@ -1,0 +1,73 @@
+.qualitat--section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  .qualitat--panel {
+    background-color: rgb(249, 250, 220);
+    border: 2px solid blueviolet;
+    padding: 20px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    box-sizing: border-box;
+    height: 250px;
+  }
+
+.qualitat--panel p {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+  
+  .qualitat--header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .qualitat--logo {
+    font-size: 24px;
+    color: blueviolet;
+    margin-right: 10px;
+
+  }
+  
+.qualitat--message {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.5em;
+    position: relative;
+    text-align: center;
+}
+  
+  .qualitat--message::after {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 2px;
+    background-color: blueviolet;
+    margin: 10px auto 0;
+  }
+  
+  .qualitat--panel:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s ease;
+    transform: scale(0.98);
+  }
+  
+  .qualitat--panel:not(:hover) {
+    transition: transform 0.6s ease;
+    transform: scale(1);
+  }
+
+  .qualitat--commercial {
+    padding-top: 1em;
+  }

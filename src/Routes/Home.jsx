@@ -3,8 +3,9 @@ import GradientBackground from "../BlocWrapper/block"; // Assurez-vous que le ch
 import "../Styles/Home.css";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
-import Whoami from "../Components/Perso-intro/Whoami";  
+import Whoami from "../Components/Perso-intro/Whoami";
 import PanelWords from "../Components/panel-words/PanelWords";
+import Qualitat from "../Components/Qualitat/Qualitat";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
         <Header />
         <PanelWords />
         <Whoami />
+        <Qualitat />
         <Footer />
       </div>
     </div>
