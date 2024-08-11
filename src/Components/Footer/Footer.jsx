@@ -6,6 +6,7 @@ import {
   faLinkedin,
   faSquareGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons"; // Importation de l'icône fa-arrow-up
 import "./Footer.css";
 import logobw from "../../Assets/bwlogo.png";
 
@@ -30,9 +31,21 @@ const Footer = () => {
     };
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <footer>
       <div className="Footer-ensemble">
+        <span className="Back--top" onClick={scrollToTop}>
+          <a className="back-to-top">
+            <FontAwesomeIcon icon={faArrowUp} className="top-arrow" />
+          </a>
+        </span>
         <div className="milieu-footer">
           <img src={logobw} alt="logo-company-black-white" />
         </div>
