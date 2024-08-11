@@ -6,6 +6,7 @@ import Footer from "../Components/Footer/Footer";
 import Whoami from "../Components/Perso-intro/Whoami";
 import PanelWords from "../Components/panel-words/PanelWords";
 import Qualitat from "../Components/Qualitat/Qualitat";
+import Contact from "../Components/Contact/Contact";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
         <PanelWords />
         <Whoami />
         <Qualitat />
+        <Contact />
         <Footer />
       </div>
     </div>
