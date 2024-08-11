@@ -24,9 +24,9 @@ const Header = () => {
                 <div className={`menu ${menuVisible ? 'menuVisible' : ''}`}>
                     <ul>
                         <a href="/"><li>ACCUEIL</li></a>
-                        <a href="/works"><li>REALISATIONS</li></a>
-                        <a href="/contact"><li>CONTACT</li></a>
-                        <a href="/about"><li>A PROPOS</li></a>
+                        <a href="#works"><li>REALISATIONS</li></a>
+                        <a href="#contact"><li>CONTACT</li></a>
+                        <a href="/tarif"><li>TARIFICATION</li></a>
                         <a href="/mentions"><li>MENTIONS LEGALES</li></a>
                     </ul>
 

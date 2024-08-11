@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="contact--panel">
         <div className="contact--header">
           <h3 className="contact--message">
-            <FontAwesomeIcon icon={faEnvelope} className="contact--logo" />
+            <FontAwesomeIcon icon={faEnvelope} className="contact--logo" id="contact"/>
             Contactez-moi
           </h3>
           <p>
@@ -18,7 +18,7 @@ const Contact = () => {
             ne sont pas utilisées à des fins commerciales ou publicitaires.
           </p>
         </div>
-        <form className="contact--form">
+        <form className="contact--form" >
           <fieldset>
             <div className="contact--row">
               <div className="contact--prenom">

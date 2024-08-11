@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Routes/Home";
-import Works from "./Routes/Works";
 import Notfound from "./Routes/Notfound";
 import Mentions from "./Routes/Mentions";
+import Tarif from "./Routes/Tarif";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
@@ -36,8 +36,8 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/works" element={<Works />} />
         <Route path="/mentions" element={<Mentions />} />
+        <Route path="/tarif" element={<Tarif />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </Router>
