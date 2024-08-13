@@ -6,7 +6,7 @@ import {
   faLinkedin,
   faSquareGithub,
 } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons"; // Importation de l'icône fa-arrow-up
+import { faArrowUp, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"; // Importation de l'icône fa-arrow-up
 import "./Footer.css";
 import logobw from "../../Assets/bwlogo.png";
 
@@ -50,8 +50,8 @@ const Footer = () => {
           <img src={logobw} alt="logo-company-black-white" />
         </div>
         <div className="droite-footer">
-          <a href="https://app.voxiplan.com/s/9991590578">
-            <p>Horaires: 9h-12h / 14h-18h</p>
+        <a href="https://app.voxiplan.com/s/9991590578" className="horaires-link">
+            <p>Horaires: 9h-12h / 14h-18h <span className="logo--voxiplan"><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span></p>
           </a>
           <p>www.cyberflex.fr</p>
           <form className="News--form">

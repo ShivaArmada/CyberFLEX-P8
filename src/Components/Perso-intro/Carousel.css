@@ -109,3 +109,32 @@
   transform: translateX(180%);
   transition: opacity 1000ms ease-in, transform 1000ms ease-out;
 }
+
+
+.item {
+  position: relative;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid blueviolet;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.item:hover .popup {
+  display: block;
+}
+
+.popup .fa-star,
+.popup .fa-star-half-alt,
+.popup .fa-star-empty {
+  color: blueviolet;
+}

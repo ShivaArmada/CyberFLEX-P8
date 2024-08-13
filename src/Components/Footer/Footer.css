@@ -136,6 +136,13 @@ html, body {
     display: block;
     margin-top: 10px;
   }
+  .logo--voxiplan {
+    display: inline-flex;
+    align-items: flex-start;
+    font-size: 0.5em; 
+    transform: translateY(-10px);
+
+  }
   
   .droite-footer {
     right: 0;

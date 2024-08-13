@@ -1,0 +1,17 @@
+.works-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tag {
+    background-color: blueviolet;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
