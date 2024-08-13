@@ -1,17 +1,126 @@
-.works-container {
+/* Container for the works section */
+.works--container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between items */
+    justify-content: space-between; /* Distribute space between items */
 }
 
+/* Individual project item */
+.project {
+    flex: 1 1 30%; /* Allow items to take up to 30% of the container's width */
+    max-width: 30%; /* Limit the maximum width to 30% */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    margin-bottom: 20px; /* Space at the bottom for items that wrap to the next line */
+    padding: 10px; /* Add padding inside the project item */ /* Add a border around the project item */
+    border-radius: 25px; 
+}
+
+/* Project title */
+.works--title--project {
+    font-size: 1.5em; /* Increase the font size */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+/* Project image */
+.works--picture {
+    width: 100%; /* Make the image take up the full width of the project item */
+    height: auto; /* Maintain the aspect ratio of the image */
+    border-radius: 5px; /* Round the corners of the image */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+/* Project content text */
+.works-content-text {
+    font-size: 1em; /* Set the font size */
+    margin-bottom: 10px; /* Space below the content text */
+}
+
+/* Tags container */
 .tags {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 10px; /* Space between tags */
+    flex-wrap: wrap; /* Allow tags to wrap to the next line if necessary */
 }
 
+/* Individual tag */
 .tag {
-    background-color: blueviolet;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
+    background-color: blueviolet; /* Background color for the tag */
+    color: white; /* Text color for the tag */
+    padding: 5px 10px; /* Padding inside the tag */
+    border-radius: 5px; /* Round the corners of the tag */
+    font-size: 0.9em; /* Set the font size */
+}
+
+/* Container for the works section */
+.works--container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between items */
+    justify-content: space-between; /* Distribute space between items */
+}
+
+/* Individual project item */
+.project {
+    flex: 1 1 30%; /* Allow items to take up to 30% of the container's width */
+    max-width: 30%; /* Limit the maximum width to 30% */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    margin-bottom: 20px; /* Space at the bottom for items that wrap to the next line */
+    padding: 10px; /* Add padding inside the project item */
+    border: 1px solid #ddd; /* Add a border around the project item */
+    border-radius: 5px; /* Round the corners of the project item */
+    background-color: #f9f9f9; /* Light background color for the project item */
+}
+
+/* Project title */
+.works--title--project {
+    font-size: 1.5em; /* Increase the font size */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+/* Project image */
+.works--picture {
+    width: 100%; /* Make the image take up the full width of the project item */
+    height: auto; /* Maintain the aspect ratio of the image */
+    border-radius: 5px; /* Round the corners of the image */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+/* Project content text */
+.works-content-text {
+    font-size: 1em; /* Set the font size */
+    margin-bottom: 10px; /* Space below the content text */
+}
+
+/* Tags container */
+.tags {
+    display: flex;
+    gap: 10px; /* Space between tags */
+    flex-wrap: wrap; /* Allow tags to wrap to the next line if necessary */
+}
+
+/* Individual tag */
+.tag {
+    background-color: blueviolet; /* Background color for the tag */
+    color: white; /* Text color for the tag */
+    padding: 5px 10px; /* Padding inside the tag */
+    border-radius: 5px; /* Round the corners of the tag */
+    font-size: 0.9em; /* Set the font size */
+}
+
+/* Show more button */
+.show-more-button {
+    display: block;
+    margin: 20px auto; /* Center the button */
+    padding: 10px 20px; /* Add padding inside the button */
+    font-size: 1em; /* Set the font size */
+    background-color: blueviolet; /* Background color for the button */
+    color: white; /* Text color for the button */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Round the corners of the button */
+    cursor: pointer; /* Change the cursor to a pointer */
+}
+
+.show-more-button:hover {
+    background-color: darkviolet; /* Change background color on hover */
 }
