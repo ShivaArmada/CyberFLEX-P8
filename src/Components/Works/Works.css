@@ -66,10 +66,8 @@
     max-width: 30%; /* Limit the maximum width to 30% */
     box-sizing: border-box; /* Include padding and border in the element's total width */
     margin-bottom: 20px; /* Space at the bottom for items that wrap to the next line */
-    padding: 10px; /* Add padding inside the project item */
-    border: 1px solid #ddd; /* Add a border around the project item */
-    border-radius: 5px; /* Round the corners of the project item */
-    background-color: #f9f9f9; /* Light background color for the project item */
+    padding: 10px; /* Add padding inside the project item */ /* Add a border around the project item */
+    border-radius: 25px; /* Light background color for the project item */
 }
 
 /* Project title */
