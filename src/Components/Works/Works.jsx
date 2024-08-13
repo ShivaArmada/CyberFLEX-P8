@@ -4,44 +4,37 @@ import './Works.css';
 const dataAbout = [
   {
     id: 1,
-    title: 'Project 1',
-    picture: "https://via.placeholder.com/150",
-    content: 'This is a placeholder for project 1 content.',
-    tags: ['React', 'CSS', 'JavaScript']
-  },
-  {
-    id: 2,
-    title: 'Project 2',
+    title: 'Project 2 / Openclassroom',
     picture: 'https://via.placeholder.com/150',
-    content: 'Booki',
+    content: 'Booki - Frontend',
     tags: ['HTML', 'CSS']
   },
   {
-    id: 3,
-    title: 'Project 3',
+    id: 2,
+    title: 'Project 3 / Openclassroom',
     picture: 'https://via.placeholder.com/150',
-    content: 'This is a placeholder for project 3 content.',
+    content: 'Sophie Bluel - Login- Popup',
     tags: ['HTML', 'CSS', 'JavaScript']
   },
   {
-    id: 4,
-    title: 'Project 4',
+    id: 3,
+    title: 'Project 4 / Openclassroom',
     picture: 'https://via.placeholder.com/150',
-    content: 'This is a placeholder for project 4 content.',
-    tags: ['HTML', 'SIO']
+    content: 'Nina Carducci - Optimisation SEO',
+    tags: ['HTML', 'SEO', 'CSS', 'Design']
   },
   {
-    id: 5,
-    title: 'Project 5',
+    id: 4,
+    title: 'Project 5 / Openclassroom',
     picture: 'https://via.placeholder.com/150',
-    content: 'This is a placeholder for project 5 content.',
+    content: 'Kasa - React app',
     tags: ['React', 'Node.js']
   },
   {
     id: 6,
-    title: 'Project 6',
+    title: 'Project 6 / Openclassroom',
     picture: 'https://via.placeholder.com/150',
-    content: 'This is a placeholder for project 6 content.',
+    content: 'Mon vieux Grimoire - Backend',
     tags: ['Node.js', 'Express', 'MongoDB']
   }
 ];

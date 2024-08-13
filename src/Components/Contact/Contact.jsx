@@ -1,9 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    prenom: '',
+    nom: '',
+    email: '',
+    message: '',
+    confirmation: false
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === 'checkbox' ? checked : value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    if (!formData.confirmation) {
+      alert("Vous devez accepter de soumettre vos informations personnelles.");
+      return;
+    }
+  
+    try {
+      const response = await fetch('http://localhost:5000/api/send-email', { // Mise à jour de l'URL
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+  
+      if (response.ok) {
+        alert('Email envoyé avec succès!');
+      } else {
+        alert('Échec de l\'envoi du mail.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Échec de l\'envoi du mail.');
+    }
+  };
   return (
     <div className="contact--section">
       <div className="contact--panel">
@@ -18,20 +61,34 @@ const Contact = () => {
             ne sont pas utilisées à des fins commerciales ou publicitaires.
           </p>
         </div>
-        <form className="contact--form" >
+        <form className="contact--form" onSubmit={handleSubmit}>
           <fieldset>
             <div className="contact--row">
               <div className="contact--prenom">
                 <label htmlFor="prenom">
                   <h3><span className="red-asterisk">*</span> Prénom</h3>
                 </label>
-                <input type="text" id="prenom" placeholder="Pierre" name="Prénom" />
+                <input
+                  type="text"
+                  id="prenom"
+                  placeholder="Pierre"
+                  name="prenom"
+                  value={formData.prenom}
+                  onChange={handleChange}
+                />
               </div>
               <div className="contact--nom">
                 <label htmlFor="nom">
                   <h3><span className="red-asterisk">*</span> Nom</h3>
                 </label>
-                <input type="text" id="nom" placeholder="Henry" name="Nom" />
+                <input
+                  type="text"
+                  id="nom"
+                  placeholder="Henry"
+                  name="nom"
+                  value={formData.nom}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
@@ -44,6 +101,8 @@ const Contact = () => {
                 id="email"
                 placeholder="pierre.henry@gmail.com"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
               />
             </div>
             <div className="contact--textarea">
@@ -55,14 +114,22 @@ const Contact = () => {
                 id="message"
                 placeholder="Votre message...."
                 maxLength="300"
+                value={formData.message}
+                onChange={handleChange}
               ></textarea>
             </div>
             <div className="contact--confirmation">
-            <label htmlFor="check">
+              <label htmlFor="check">
                 j&apos;accepte de soumettre mes informations personelles via ce
                 formulaire.
               </label>
-              <input type="checkbox" id="check" name="confirmation" />
+              <input
+                type="checkbox"
+                id="check"
+                name="confirmation"
+                checked={formData.confirmation}
+                onChange={handleChange}
+              />
             </div>
           </fieldset>
           <button type="submit">Envoyer</button>
