@@ -79,11 +79,23 @@
 }
 
 /* Project image */
-.works--picture {
+.works--picture-container {
     width: 100%; /* Make the image take up the full width of the project item */
     height: 130px; /* Maintain the aspect ratio of the image */
-    border-radius: 5px; /* Round the corners of the image */
+    border-radius: 25px; /* Round the corners of the image */
     margin-bottom: 10px; /* Space below the image */
+    overflow: hidden; /* Hide any overflow content */
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works--picture {
+    max-width: 100%;
+    width: 50%; /* Limite la largeur maximale à 100% de son conteneur parent */
+    height: 80%; /* Maintient le ratio d'aspect de l'image */
+
 }
 
 /* Project content text */
@@ -125,3 +137,4 @@
 .show-more-button:hover {
     background-color: darkviolet; /* Change background color on hover */
 }
+

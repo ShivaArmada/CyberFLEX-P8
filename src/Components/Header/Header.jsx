@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Header.css";
 import Logo from "../../Assets/CompanyLogo.png";
 
 const Header = () => {
     const [menuVisible, setMenuVisible] = useState(false);
+    const location = useLocation();
 
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
@@ -51,8 +53,12 @@ const Header = () => {
                 <div className={`menu ${menuVisible ? 'menuVisible' : ''}`}>
                     <ul>
                         <a href="/" ><li>ACCUEIL</li></a>
-                        <a href="#works" onClick={(e) => scrollToSection(e, '#works')}><li>REALISATIONS</li></a>
-                        <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')}><li>CONTACT</li></a>
+                        {location.pathname === '/' && (
+                            <>
+                                <a href="#works" onClick={(e) => scrollToSection(e, '#works')}><li>REALISATIONS</li></a>
+                                <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')}><li>CONTACT</li></a>
+                            </>
+                        )}
                         <a href="/tarif" onClick={toggleMenu}><li>TARIFICATION</li></a>
                         <a href="/mentions" onClick={toggleMenu}><li>MENTIONS LEGALES</li></a>
                     </ul>
