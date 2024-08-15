@@ -12,8 +12,36 @@
     max-width: 30%; /* Limit the maximum width to 30% */
     box-sizing: border-box; /* Include padding and border in the element's total width */
     margin-bottom: 20px; /* Space at the bottom for items that wrap to the next line */
-    padding: 10px; /* Add padding inside the project item */ /* Add a border around the project item */
+    padding: 10px; /* Add padding inside the project item */
+    border: 1px solid #ccc; /* Add a border around the project item */
     border-radius: 25px; 
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hidden projects */
+.project.hidden {
+    display: none;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
+  }
+
+/* Expanded dropdown content */
+.project .dropdown-content {
+    max-height: 500px; /* Adjust this value according to your content's height */
 }
 
 /* Project title */
@@ -81,9 +109,8 @@
 /* Project image */
 .works--picture-container {
     width: 100%; /* Make the image take up the full width of the project item */
-    height: 130px; /* Maintain the aspect ratio of the image */
-    border-radius: 25px; /* Round the corners of the image */
-    margin-bottom: 10px; /* Space below the image */
+    height: 135px; /* Maintain the aspect ratio of the image */
+    border-radius: 25px; 
     overflow: hidden; /* Hide any overflow content */
     background-color: lightgray;
     display: flex;
@@ -94,7 +121,8 @@
 .works--picture {
     max-width: 100%;
     width: 50%; /* Limite la largeur maximale à 100% de son conteneur parent */
-    height: 80%; /* Maintient le ratio d'aspect de l'image */
+    height: 80px; /* Maintient le ratio d'aspect de l'image */
+margin-bottom: 0;
 
 }
 
@@ -121,6 +149,12 @@
     font-size: 0.9em; /* Set the font size */
 }
 
+.works-icon {
+    font-size: 2em;
+    color: black;
+    margin-top: 35px;
+}
+
 /* Show more button */
 .show-more-button {
     display: block;
@@ -138,3 +172,7 @@
     background-color: darkviolet; /* Change background color on hover */
 }
 
+
+.works-active {
+    height: fit-content;
+}
