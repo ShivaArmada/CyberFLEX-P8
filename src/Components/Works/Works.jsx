@@ -54,7 +54,7 @@ const dataAbout = [
     title: "Project 5 / Openclassrooms",
     picture: P5,
     content: "Kasa - React app",
-    tags: ["React", "Node.js"],
+    tags: ["React", "Styled-components", "Sass"],
     description: "Kasa, un acteur majeur de l'industrie, s'est lancé dans la refonte de son ancien site, autrefois bâti sur ASP.NET, en adoptant une stack JavaScript moderne, avec React pour le front-end et Node.js pour le back-end. Ma mission est de lancer ce projet en respectant les maquettes Figma élaborées par le designer Paul, tout en développant les composants et routes nécessaires. Ce projet représente une opportunité d'affiner des compétences clés en développement web, notamment la maîtrise de React et de React Router, ainsi que l'utilisation de Sass pour la gestion du CSS. Ces compétences sont hautement valorisées dans l'industrie pour la création d'applications interactives et réactives.",
     picdescription: [P51, P52],
   },
