@@ -1,0 +1,155 @@
+.tarif-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc; /* Optionnel: pour visualiser les bordures */
+    padding: 20px;
+    background-color: rgba(252, 255, 158, 0.726); /* Optionnel: pour ajouter de l'espace intérieur */
+}
+
+.tarif-mascotte,
+.tarif-formule-forfait {
+    width: 48%; /* Ajustement pour tenir compte de l'espace entre les éléments */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #ccc; /* Optionnel: pour visualiser les bordures */
+    padding: 20px; /* Optionnel: pour ajouter de l'espace intérieur */
+    box-sizing: border-box;
+    background-color: rgb(249, 250, 220);
+    /* Pour inclure le padding et la bordure dans la largeur et la hauteur */
+    position: relative; /* Pour que l'image de fond soit positionnée par rapport à ce conteneur */
+}
+a {
+    text-decoration: none;
+}
+
+.tarif-formule-content img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: cover;
+}
+
+.tarif-formule-sur-mesure {
+    width: 80%;
+    height: 1000px;
+    margin: 0 auto; /* Centrer horizontalement */
+    border: 1px solid #ccc; /* Optionnel: pour visualiser les bordures */
+    padding: 20px; /* Optionnel: pour ajouter de l'espace intérieur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 3%;
+    background-color: rgb(249, 250, 220);
+    flex-wrap: wrap;
+}
+
+.tarif-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+}
+
+.RobotMascotte {
+    width: 90%;
+    height: 90%;
+}
+.tarif-placeholder img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+}
+
+.en-travaux {
+    margin-top: 20px; /* Optionnel: pour ajouter de l'espace entre l'image et le texte */
+    text-align: center;
+}
+
+.tarif-formule-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+
+.tarif-formule-content {
+    position: relative;
+    text-decoration: none;
+    z-index: 1; /* Mettre le contenu devant l'image de fond */
+}
+
+.tarif-formule-forfait {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    border: 2px solid blueviolet; /* Bordure verte pour attirer l'attention */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9fafc; /* Couleur de fond claire pour le contraste */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour l'effet de profondeur */
+    border-radius: 10px; /* Coins arrondis pour un look moderne */
+    transition: transform 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+.tarif-formule-forfait:hover {
+    transform: scale(1.05); /* Agrandir légèrement au survol */
+}
+
+.tarif-formule-content h2 {
+    font-size: 2em;
+    color: blueviolet; /* Couleur verte pour le titre */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tarif-formule-content p {
+    font-size: 1.2em;
+    color: #333; /* Couleur de texte sombre pour la lisibilité */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tarif-formule-content ul {
+    list-style-type: none; /* Supprimer les puces */
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.tarif-formule-content ul li {
+    font-size: 1.1em;
+    color: #555; /* Couleur de texte légèrement plus claire */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tarif-formule-content ul li::before {
+    content: "✔"; /* Ajouter une coche avant chaque élément */
+    color: #4CAF50; /* Couleur verte pour la coche */
+    margin-right: 10px;
+}
+
+.tarif-formule-content p:last-of-type {
+    font-size: 1.5em;
+    color: #ff9100; /* Couleur rose pour le prix */
+    font-weight: bold;
+    text-align: center;
+}
