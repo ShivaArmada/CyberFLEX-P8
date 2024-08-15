@@ -36,12 +36,23 @@
   }
   
   .visible {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   }
 
 /* Expanded dropdown content */
 .project .dropdown-content {
-    max-height: 500px; /* Adjust this value according to your content's height */
+    max-height: 100%; 
+}
+#works-drop-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the container has a defined height */
+    text-align: center; /* Center the text horizontally */
+    font-size: 1.3em;
 }
 
 /* Project title */

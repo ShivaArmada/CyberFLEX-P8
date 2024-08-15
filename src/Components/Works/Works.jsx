@@ -94,7 +94,7 @@ const Works = () => {
               ))}
             </div>
             <div className={`dropdown-content ${selectedProjectId === project.id ? 'visible' : 'hidden'}`}>
-              <p className="works-content-text">{project.description}</p>
+              <p className="works-content-text" id='works-drop-text'>{project.description}</p>
             </div>
             <span className='works-icon'>
               <FontAwesomeIcon icon={selectedProjectId === project.id ? faSquareCaretUp : faSquareCaretDown} />
