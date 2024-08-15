@@ -26,7 +26,7 @@ const Whoami = () => {
     <>
       <div className="whoami whoami--intro">
         <h1>Qui suis-je ?</h1>
-        <p>
+        <p className="whoami--intro--text">
           Depuis mon enfance, la technologie m&apos;a toujours fasciné, des
           premiers jeux sur PC à la réparation d&apos;ordinateurs.
           Aujourd&apos;hui, ce parcours m&apos;amène à créer des expériences web

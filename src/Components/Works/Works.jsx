@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './Works.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareCaretUp, faSquareCaretDown } from '@fortawesome/free-regular-svg-icons';
-import P2 from '../../Assets/P2.png';
-import P3 from '../../Assets/P3.png';
-import P4 from '../../Assets/P4.png';
-import P5 from '../../Assets/P5.png';
-import P6 from '../../Assets/P6.png';
+import P2 from '../../Assets/ProjetsPic/P2.png';
+import P3 from '../../Assets/ProjetsPic/P3.png';
+import P4 from '../../Assets/ProjetsPic/P4.png';
+import P5 from '../../Assets/ProjetsPic/P5.png';
+import P6 from '../../Assets/ProjetsPic/P6.png';
 
 const dataAbout = [
   {
@@ -95,6 +95,7 @@ const Works = () => {
             </div>
             <div className={`dropdown-content ${selectedProjectId === project.id ? 'visible' : 'hidden'}`}>
               <p className="works-content-text" id='works-drop-text'>{project.description}</p>
+
             </div>
             <span className='works-icon'>
               <FontAwesomeIcon icon={selectedProjectId === project.id ? faSquareCaretUp : faSquareCaretDown} />

@@ -39,6 +39,13 @@
     z-index: 1; /* Assurez-vous que le trou est au-dessus de la bordure */
 }
 
+.whoami--intro--text {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    text-align: center;
+}
+
 h1:hover {
     color: blueviolet;
 }
