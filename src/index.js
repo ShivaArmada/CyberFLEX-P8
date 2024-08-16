@@ -30,6 +30,19 @@ window.axeptioSettings = {
   t.parentNode.insertBefore(e, t);
 })(document, "script");
 
+// Brevo Conversations {literal}
+(function(d, w, c) {
+    w.BrevoConversationsID = '66be92ecb1891b1ee904d134';
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    var s = d.createElement('script');
+    s.async = true;
+    s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'BrevoConversations');
+// /Brevo Conversations {/literal}
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

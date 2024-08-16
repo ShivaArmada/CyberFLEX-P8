@@ -8,7 +8,7 @@ app.use(cors());
 
 // Other middleware and routes
 app.use(express.json());
-const Mailrouter = require('./Routes/MailRoute');
+const Mailrouter = require('./Routes/MailRoute'); // Assurez-vous que ce chemin est correct
 app.use('/api', Mailrouter);
 
 app.listen(port, () => {

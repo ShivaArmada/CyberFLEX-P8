@@ -1,6 +1,16 @@
 const nodemailer = require('nodemailer');
 const axios = require('axios');
 
+function createMailOptions(from, to, subject, text, replyTo) {
+  return {
+    from,
+    to,
+    subject,
+    text,
+    replyTo: replyTo || 'no-reply@cyberflex.fr'
+  };
+}
+
 exports.sendEmail = (req, res) => {
   const { prenom, nom, email, message } = req.body;
 
@@ -14,13 +24,13 @@ exports.sendEmail = (req, res) => {
     secure: false // True pour port 465, false pour port 587
   });
 
-  const mailOptions = {
-    from: 'Shiva <shiva@cyberflex.fr>',  // Expéditeur vérifié sur Brevo
-    to: 'shiva@cyberflex.fr',
-    subject: `Requête de ${prenom || "Prénom"} ${nom || "Nom"} <${email || "Adresse e-mail manquante"}> via le formulaire de contact`,
-    text: message || "Message vide",  // Ajout de valeur par défaut si le message est vide
-    replyTo: email || 'no-reply@cyberflex.fr'  // Ajout d'un email de réponse par défaut
-  };
+  const mailOptions = createMailOptions(
+    'Shiva <shiva@cyberflex.fr>',
+    'shiva@cyberflex.fr',
+    `Requête de ${prenom || "Prénom"} ${nom || "Nom"} <${email || "Adresse e-mail manquante"}> via le formulaire de contact`,
+    message || "Message vide",
+    email
+  );
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
@@ -35,19 +45,18 @@ exports.sendEmail = (req, res) => {
 exports.subscribeNewsletter = async (req, res) => {
   const { email } = req.body;
 
-  // Assurez-vous de loguer l'email pour débugger si besoin
   console.log("Nouvelle inscription à la newsletter:", email);
 
-  // Utilisation de l'API de Brevo pour envoyer un email basé sur un template
-  const apiKey = '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'; // Votre clé API Brevo
-  const templateId = 1; // ID de votre template
+  const apiKey = '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';
+  const templateId = 1;
 
   const data = {
     to: [{ email }],
     templateId: templateId,
     params: {
-      // Ajoutez ici les paramètres de votre template
-      // Par exemple, si votre template utilise {{name}}, vous pouvez passer { name: 'John' }
+      from: 'CyberFLEX <planckaertg@gmail.com>',
+      subject: 'Bienvenue chez CyberFLEX ! 🤖',
+      // Ajoutez ici les paramètres nécessaires pour votre template
     }
   };
 
@@ -72,13 +81,15 @@ exports.subscribeNewsletter = async (req, res) => {
       },
       secure: false
     });
+    
 
-    const mailOptions = {
-      from: 'Shiva <shiva@cyberflex.fr>',
-      to: 'shiva@cyberflex.fr',
-      subject: `Nouvelle inscription à la newsletter: ${email}`,
-      text: `Un nouvel utilisateur s'est inscrit à la newsletter avec l'email: ${email}`
-    };
+    const mailOptions = createMailOptions(
+      'Shiva <shiva@cyberflex.fr>',
+      'shiva@cyberflex.fr',
+      `Nouvelle inscription à la newsletter: ${email}`,
+      `Un nouvel utilisateur s'est inscrit à la newsletter avec l'email: ${email}`,
+      email
+    );
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
