@@ -47,6 +47,7 @@ const Contact = () => {
       alert('Échec de l\'envoi du mail.');
     }
   };
+
   return (
     <div className="contact--section">
       <div className="contact--panel">
@@ -75,6 +76,7 @@ const Contact = () => {
                   name="prenom"
                   value={formData.prenom}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="contact--nom">
@@ -88,6 +90,7 @@ const Contact = () => {
                   name="nom"
                   value={formData.nom}
                   onChange={handleChange}
+                  required
                 />
               </div>
             </div>
@@ -103,6 +106,7 @@ const Contact = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                required
               />
             </div>
             <div className="contact--textarea">
@@ -116,6 +120,7 @@ const Contact = () => {
                 maxLength="300"
                 value={formData.message}
                 onChange={handleChange}
+                required
               ></textarea>
             </div>
             <div className="contact--confirmation">
@@ -129,6 +134,7 @@ const Contact = () => {
                 name="confirmation"
                 checked={formData.confirmation}
                 onChange={handleChange}
+                required
               />
             </div>
           </fieldset>

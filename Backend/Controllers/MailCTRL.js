@@ -3,17 +3,23 @@ const nodemailer = require('nodemailer');
 exports.sendEmail = (req, res) => {
   const { prenom, nom, email, message } = req.body;
 
+
   const transporter = nodemailer.createTransport({
-    host: 'localhost',
-    port: 1025, // Port par défaut pour MailHog
-    secure: false
+    host: 'smtp-relay.brevo.com',
+    port: 587, // Port sécurisé pour TLS/SSL
+    auth: {
+      user: '7a7024001@smtp-brevo.com',
+      pass: 'yMgwEBThGW8HNrQb'
+    },
+    secure: false // True pour port 465, false pour port 587
   });
 
   const mailOptions = {
-    from: email,
+    from: 'Shiva <shiva@cyberflex.fr>',  // Expéditeur vérifié sur Brevo
     to: 'shiva@cyberflex.fr',
-    subject: `Requête de ${prenom} ${nom} ${email} via le formulaire de contact`,
-    text: message
+    subject: `Requête de ${prenom || "Prénom"} ${nom || "Nom"} <${email || "Adresse e-mail manquante"}> via le formulaire de contact`,
+    text: message || "Message vide",  // Ajout de valeur par défaut si le message est vide
+    replyTo: email || 'no-reply@cyberflex.fr'  // Ajout d'un email de réponse par défaut
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
