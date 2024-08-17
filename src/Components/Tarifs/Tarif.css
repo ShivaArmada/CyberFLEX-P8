@@ -9,6 +9,12 @@
     padding: 20px;
     background-color: rgba(252, 255, 158, 0.726); /* Optionnel: pour ajouter de l'espace intérieur */
 }
+@media screen and (max-width: 712px) {
+    .tarif-container {
+        flex-direction: column; /* Changer l'orientation en colonne pour les petits écrans */
+        height: fit-content; /* Ajuster la hauteur en fonction du contenu */
+    }
+}
 
 .tarif-mascotte,
 .tarif-formule-forfait {
@@ -25,6 +31,12 @@
     background-color: rgb(249, 250, 220);
     /* Pour inclure le padding et la bordure dans la largeur et la hauteur */
     position: relative; /* Pour que l'image de fond soit positionnée par rapport à ce conteneur */
+}
+@media screen and (max-width: 712px) {
+    #grille-forfait1, #grille-forfait2 {
+        width: 90%;/* Ajuster la largeur pour les petits écrans */
+        margin-bottom: 20px; /* Ajouter de l'espace entre les éléments */
+    }
 }
 a {
     text-decoration: none;

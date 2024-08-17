@@ -7,10 +7,10 @@ const Tarif = () => {
     return (
         <>
             <div className='tarif-container'>
-                <div className='tarif-formule-forfait'>
+                <div className='tarif-formule-forfait' id='grille-forfait1'>
                     <img src={Mascotte} alt="Mascotte-Tarifs" className='RobotMascotte' />
                 </div>
-                <div className='tarif-formule-forfait'>
+                <div className='tarif-formule-forfait' id='grille-forfait2'>
                     <a href="https://app.voxiplan.com/s/9991590578">
                     <div className='tarif-formule-content'>
                         <h2>Formule Forfait</h2>
