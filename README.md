@@ -21,7 +21,7 @@
 - **OVH** : Utilisé pour obtenir le nom de domaine.
 - **Cloudflare** : Pour la redirection d'adresse IP (en avoir deux distinctes) et les atk DDOS.
 - **FastComet** : L'hébergement du projet cyberflex.fr .
-- **FileZilla** : Utilisé pour le déploiment sur l'hébergement.
+- **WinSCP** : Utilisé pour le déploiment sur l'hébergement.
 
 
 ## Livrable 📦
