@@ -65,6 +65,12 @@
   align-self: center;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .item img {
+    max-height: 100px;
+    max-width: 100px;
+  }
+}
 .carousel.left .carousel-item-enter {
   opacity: 0;
   transform: translateX(100%);

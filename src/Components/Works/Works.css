@@ -18,6 +18,31 @@
     cursor: pointer; /* Change cursor to pointer on hover */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
+@media (max-width: 702px) {
+/* Container for the works section */
+.works--container {
+    display: flex;
+    flex-direction: column; /* Arrange items in a single column */
+    gap: 10px; /* Space between items */
+}
+
+/* Individual project item */
+.project {
+    flex: 1 1 100%; /* Allow items to take up to 100% of the container's width */
+    min-width: 90%; /* Limit the maximum width to 100% */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    margin-bottom: 20px; /* Space at the bottom for items that wrap to the next line */
+    padding: 10px; /* Add padding inside the project item */
+    border: 1px solid #ccc; /* Add a border around the project item */
+    border-radius: 25px; 
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.tags {
+font-size: 1.8em; /* Set the font size */
+}
+}
 
 
 
@@ -65,6 +90,13 @@
     justify-content: space-between; /* Distribute space between items */
 }
 
+@media (max-width: 1879px) {
+    .works-content-text {
+      font-size: 0.7em; /* Limit the maximum width to 100% */
+    }
+}
+
+
 /* Individual project item */
 .project {
     flex: 1 1 30%; /* Allow items to take up to 30% of the container's width */
@@ -110,6 +142,36 @@ margin-bottom: 0;
     margin-top: 15px; /* Space below the content text */
 }
 
+@media (max-width: 1879px) {
+    .works-content-text {
+        font-size: 1.7em; /* Reduce the font size */
+    }
+}
+@media (max-width: 1408px) {
+    .works-content-text {
+        font-size: 1.3em; /* Reduce the font size */
+    }
+}
+@media (max-width: 1094px) {
+    .works-content-text {
+        font-size: 1em; /* Reduce the font size */
+    }
+}
+@media (max-width: 889px) {
+    .works-content-text {
+        font-size: 0.8em; /* Reduce the font size */
+    }
+    .tag {
+        font-size: 0.7em; /* Reduce the font size */
+    }
+}
+    @media (max-width: 702px) {
+        .works-content-text {
+            font-size: 1.9em; /* Limit the maximum width to 100% */
+          }
+    }
+
+
 /* Tags container */
 .tags {
     display: flex;
@@ -124,6 +186,16 @@ margin-bottom: 0;
     padding: 5px 10px; /* Padding inside the tag */
     border-radius: 5px; /* Round the corners of the tag */
     font-size: 0.9em; /* Set the font size */
+}
+@media (max-width: 889px) {
+    .tag {
+        font-size: 0.7em; /* Reduce the font size */
+    }
+}
+@media (max-width: 790px) {
+    .tag {
+        font-size: 0.5em; /* Reduce the font size */
+    }
 }
 
 .works-icon {
@@ -152,6 +224,12 @@ margin-bottom: 0;
 
 .works-active {
     height: fit-content;
+}
+@media (max-width: 1115px) {
+    .works-active {
+        width: 80%;
+        max-width: 80%;
+    }
 }
 
 /* Container for the dropdown images */

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Works.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -74,6 +74,15 @@ const Works = () => {
   const [visibleProjects, setVisibleProjects] = useState(3);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
 
+  useEffect(() => {
+    if (selectedProjectId !== null) {
+      const activeElement = document.getElementById(`project-${selectedProjectId}`);
+      if (activeElement) {
+        activeElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [selectedProjectId]);
+
   const showMoreProjects = () => {
     setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 3);
   };
@@ -108,6 +117,8 @@ const Works = () => {
                 ? "hidden"
                 : ""
             } ${selectedProjectId === project.id ? "works-active" : ""}`}
+            id={`project-${project.id}`}
+            tabIndex={-1}
             onClick={() => handleProjectClick(project.id)}
           >
             <h2 className="works--title--project">{project.title}</h2>
@@ -119,7 +130,7 @@ const Works = () => {
                 id={`project-${project.id}`}
               />
             </div>
-            <div>
+            <div className="works-content-container">
               <p className="works-content-text">{project.content}</p>
             </div>
             <div className="tags">

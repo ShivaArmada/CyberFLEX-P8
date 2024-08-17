@@ -66,6 +66,11 @@ h1:hover {
     height: 250px;
     overflow: hidden;
 }
+@media (max-width: 768px) {
+    .whoami--carousel {
+        width: 75%;
+    }
+}
 .whoami--carousel:hover {
     background-color: white;
 }

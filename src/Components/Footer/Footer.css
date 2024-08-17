@@ -166,6 +166,12 @@ html, body {
     font-weight: bold;
     text-align: center;
   }
+
+  @media (max-width: 440px) {
+    .droite-footer input {
+      width: 250px;
+    }
+  }
   
   .droite-footer input:hover,
   .droite-footer p:hover,
