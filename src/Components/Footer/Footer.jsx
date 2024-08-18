@@ -90,7 +90,7 @@ const Footer = () => {
           </a>
         </span>
         <div className="milieu-footer">
-          <img src={logobw} alt="logo-company-black-white" />
+          <img src={logobw} alt="logo-company-black-white" loading="lazy" />
         </div>
         <div className="droite-footer">
           <a href="https://app.voxiplan.com/s/9991590578" className="horaires-link">

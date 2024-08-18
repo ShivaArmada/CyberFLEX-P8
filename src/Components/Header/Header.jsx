@@ -40,7 +40,7 @@ const Header = () => {
 
     return (
         <header>
-            <img src={Logo} alt="Company-Logo" className="Logo-Company" />
+            <img src={Logo} alt="Company-Logo" className="Logo-Company" loading="lazy" />
             {menuVisible ? (
                 <button className="cross" onClick={toggleMenu}>&#735;</button>
             ) : (

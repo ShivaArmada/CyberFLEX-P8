@@ -94,7 +94,7 @@ class Item extends React.Component {
     const className = `item level${this.props.level}`;
     return (
       <div className={className}>
-        <img src={this.props.src} alt={this.props.alt} />
+        <img src={this.props.src} alt={this.props.alt} loading="lazy" />
         <Popup rating={this.props.rating} />
       </div>
     );

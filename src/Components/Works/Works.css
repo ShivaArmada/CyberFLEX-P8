@@ -225,7 +225,7 @@ margin-bottom: 0;
 .works-active {
     height: fit-content;
 }
-@media (max-width: 1115px) {
+@media (max-width: 1200px) {
     .works-active {
         width: 80%;
         max-width: 80%;

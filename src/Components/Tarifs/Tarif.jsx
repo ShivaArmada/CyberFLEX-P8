@@ -8,7 +8,7 @@ const Tarif = () => {
         <>
             <div className='tarif-container'>
                 <div className='tarif-formule-forfait' id='grille-forfait1'>
-                    <img src={Mascotte} alt="Mascotte-Tarifs" className='RobotMascotte' />
+                    <img src={Mascotte} alt="Mascotte-Tarifs" className='RobotMascotte' loading='lazy' />
                 </div>
                 <div className='tarif-formule-forfait' id='grille-forfait2'>
                     <a href="https://app.voxiplan.com/s/9991590578">
@@ -28,7 +28,7 @@ const Tarif = () => {
             </div>
             <div className='tarif-formule-sur-mesure'>
                 <span className='tarif-placeholder'>
-                    <img src={Placeholder} alt="placeholder-Tarif-sur-mesure" />
+                    <img src={Placeholder} alt="placeholder-Tarif-sur-mesure" loading='lazy' />
                 </span>
                 <h2 className='en-travaux'>Fonction de devis dynamique en travaux</h2>
             </div>

@@ -6,7 +6,7 @@ const NotFound = () => {
   return (
     <div className="Logo-Notfound">
       <a href="/">
-        <img src={NotfoundLogo} alt="Notfound-logo" />
+        <img src={NotfoundLogo} alt="Notfound-logo" loading='lazy' />
       </a>
     </div>
   );

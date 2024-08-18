@@ -27,6 +27,21 @@
     box-sizing: border-box;
     height: 250px;
   }
+  @media screen and (max-width: 1605px) {
+    .qualitat--panel {
+      height: 300px;
+    }
+  }
+  @media screen and (max-width: 1090px) {
+    .qualitat--panel {
+      height: 400px;
+    }
+  }
+  @media screen and (max-width: 874px) {
+    .qualitat--panel {
+  height: fit-content;
+    }
+  }
   @media screen and (max-width: 768px) {
     .qualitat--panel {
       width: 90%;
@@ -65,6 +80,11 @@
     position: relative;
     text-align: center;
 }
+@media screen and (max-width: 790px) {
+    .qualitat--message {
+      font-size: 1.0em;
+    }
+  }
   
   .qualitat--message::after {
     content: "";
@@ -73,6 +93,16 @@
     height: 2px;
     background-color: blueviolet;
     margin: 10px auto 0;
+  }
+  @media screen and (max-width: 1024px) {
+    .qualitat--message::after {
+      width: 200px;
+    }
+  }
+  @media screen and (max-width: 805px) {
+    .qualitat--message::after {
+      width: 150px;
+    }
   }
   
   .qualitat--panel:hover {

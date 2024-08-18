@@ -5,11 +5,11 @@ import {
   faSquareCaretUp,
   faSquareCaretDown,
 } from "@fortawesome/free-regular-svg-icons";
-import P2 from "../../Assets/ProjetsPic/P2.png";
-import P3 from "../../Assets/ProjetsPic/P3.png";
-import P4 from "../../Assets/ProjetsPic/P4.png";
-import P5 from "../../Assets/ProjetsPic/P5.png";
-import P6 from "../../Assets/ProjetsPic/P6.png";
+import P2 from "../../Assets/ProjetsPic/P2.webp";
+import P3 from "../../Assets/ProjetsPic/P3.webp";
+import P4 from "../../Assets/ProjetsPic/P4.webp";
+import P5 from "../../Assets/ProjetsPic/P5.webp";
+import P6 from "../../Assets/ProjetsPic/P6.webp";
 import P21 from "../../Assets/ProjetsPic/PicCollapse/P2-1.webp";
 import P22 from "../../Assets/ProjetsPic/PicCollapse/P2-2.webp";
 import P31 from "../../Assets/ProjetsPic/PicCollapse/P3-1.webp";
@@ -128,6 +128,7 @@ const Works = () => {
                 alt={project.title}
                 className="works--picture"
                 id={`project-${project.id}`}
+                loading="lazy"
               />
             </div>
             <div className="works-content-container">
@@ -158,6 +159,7 @@ const Works = () => {
                       key={index}
                       id={`project-${project.id}-${index}`}
                       onClick={() => handleImageClick(pic)}
+                      loading="lazy"
                     />
                   ))}
               </div>
