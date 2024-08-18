@@ -6,7 +6,14 @@ import Notfound from "./Routes/Notfound";
 import Mentions from "./Routes/Mentions";
 import Tarif from "./Routes/Tarif";
 import "./index.css";
+import TagManager from 'react-gtm-module';
 import reportWebVitals from "./reportWebVitals";
+
+const tagManagerArgs = {
+  gtmId: 'GTM-KH8B3GBQ'  // Remplacez par votre ID de conteneur GTM
+};
+
+TagManager.initialize(tagManagerArgs);
 
 window.axeptioSettings = {
   clientId: "66ac283f88d34fcf2c27efe0",
