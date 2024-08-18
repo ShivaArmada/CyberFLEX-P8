@@ -30,18 +30,13 @@ window.axeptioSettings = {
   t.parentNode.insertBefore(e, t);
 })(document, "script");
 
-// Brevo Conversations {literal}
-(function(d, w, c) {
-    w.BrevoConversationsID = '66be92ecb1891b1ee904d134';
-    w[c] = w[c] || function() {
-        (w[c].q = w[c].q || []).push(arguments);
-    };
-    var s = d.createElement('script');
-    s.async = true;
-    s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
-    if (d.head) d.head.appendChild(s);
-})(document, window, 'BrevoConversations');
-// /Brevo Conversations {/literal}
+// Google Tag Manager
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KH8B3GBQ');
+  // End Google Tag Manager
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
