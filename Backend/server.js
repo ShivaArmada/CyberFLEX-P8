@@ -1,16 +1,30 @@
 const express = require('express');
 const cors = require('cors');
-const app = express();
-const port = 5000;
+const http = require('http');
 
-// Use the CORS middleware
+const app = express();
+const port = process.env.PORT || 5000; // Utilisez le port défini dans les variables d'environnement ou 5000 par défaut
+
+// Utilisez le middleware CORS
 app.use(cors());
 
-// Other middleware and routes
+// Autres middlewares et routes
 app.use(express.json());
 const Mailrouter = require('./Routes/MailRoute'); // Assurez-vous que ce chemin est correct
 app.use('/api', Mailrouter);
 
-app.listen(port, () => {
+// Route de placeholder
+app.get('/', (req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  const message = 'It works!\n';
+  const version = 'NodeJS ' + process.versions.node + '\n';
+  const response = [message, version].join('\n');
+  res.end(response);
+});
+
+// Créez le serveur HTTP et intégrez l'application Express
+const server = http.createServer(app);
+
+server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
