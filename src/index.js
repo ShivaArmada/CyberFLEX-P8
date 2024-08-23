@@ -8,6 +8,11 @@ import Tarif from "./Routes/Tarif";
 import "./index.css";
 import TagManager from 'react-gtm-module';
 import reportWebVitals from "./reportWebVitals";
+import { disableReactDevTools } from '@fvilers/disable-react-devtools';
+
+if (process.env.NODE_ENV === 'production') {
+  disableReactDevTools();
+}
 
 const tagManagerArgs = {
   gtmId: 'GTM-KH8B3GBQ'  // Remplacez par votre ID de conteneur GTM
