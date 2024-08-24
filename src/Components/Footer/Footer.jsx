@@ -17,7 +17,7 @@ function NewsletterForm() {
   const handleSubmit = (event) => {
     event.preventDefault(); // Empêche le rechargement de la page
 
-    fetch("https://backend-cyberflex.onrender.com/api/subscribe", {
+    fetch("https://cyberflex.fr/Backend/api/subscribe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
