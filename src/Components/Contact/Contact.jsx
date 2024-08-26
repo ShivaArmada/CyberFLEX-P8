@@ -49,12 +49,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact__section" itemscope itemtype="http://schema.org/ContactPoint">
+    <div className="contact__section" itemScope itemType="http://schema.org/ContactPoint">
       <div className="contact__panel">
         <div className="contact__panel--header">
           <h3 className="contact__panel--message">
             <FontAwesomeIcon icon={faEnvelope} className="contact__panel--logo" id="contact"/>
-            <span itemprop="contactType">Contactez-moi</span>
+            <span itemProp="contactType">Contactez-moi</span>
           </h3>
           <p>
             Les informations envoyées via ce formulaire sont utilisées pour vous
@@ -62,7 +62,7 @@ const Contact = () => {
             ne sont pas utilisées à des fins commerciales ou publicitaires.
           </p>
         </div>
-        <form className="contact__form" onSubmit={handleSubmit} itemprop="contactOption">
+        <form className="contact__form" onSubmit={handleSubmit} itemProp="contactOption">
           <fieldset id="contact__form--field">
             <div className="contact__form--row">
               <div className="contact__form--prenom">
@@ -77,7 +77,7 @@ const Contact = () => {
                   value={formData.prenom}
                   onChange={handleChange}
                   required
-                  itemprop="givenName"
+                  itemProp="givenName"
                 />
               </div>
               <div className="contact__form--nom">
@@ -92,7 +92,7 @@ const Contact = () => {
                   value={formData.nom}
                   onChange={handleChange}
                   required
-                  itemprop="familyName"
+                  itemProp="familyName"
                 />
               </div>
             </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                itemprop="email"
+                itemProp="email"
               />
             </div>
             <div className="contact__form--textarea">
@@ -124,7 +124,7 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                itemprop="message"
+                itemProp="message"
               ></textarea>
             </div>
             <div className="contact__form--confirmation">

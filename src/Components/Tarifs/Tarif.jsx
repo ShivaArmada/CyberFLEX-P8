@@ -6,31 +6,31 @@ import Placeholder from '../../Assets/Devis-placeholder.png';
 const Tarif = () => {
     return (
         <>
-            <div className='tarif-container' itemscope itemtype="http://schema.org/OfferCatalog">
-                <div className='tarif-formule-forfait' id='grille-forfait1' itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                    <img src={Mascotte} alt="Mascotte-Tarifs" className='RobotMascotte' loading='lazy' itemprop="image" />
+            <div className='tarif-container' itemScope itemType="http://schema.org/OfferCatalog">
+                <div className='tarif-formule-forfait' id='grille-forfait1' itemProp="itemListElement" itemScope itemType="http://schema.org/Offer">
+                    <img src={Mascotte} alt="Mascotte-Tarifs" className='RobotMascotte' loading='lazy' itemProp="image" />
                 </div>
-                <div className='tarif-formule-forfait' id='grille-forfait2' itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
-                    <a href="https://app.voxiplan.com/s/9991590578" itemprop="url">
+                <div className='tarif-formule-forfait' id='grille-forfait2' itemProp="itemListElement" itemScope itemType="http://schema.org/Offer">
+                    <a href="https://app.voxiplan.com/s/9991590578" itemProp="url">
                         <div className='tarif-formule-content'>
-                            <h2 itemprop="name">Formule Forfait</h2>
-                            <p itemprop="description">Un site web complet pour un prix fixe</p>
+                            <h2 itemProp="name">Formule Forfait</h2>
+                            <p itemProp="description">Un site web complet pour un prix fixe</p>
                             <ul>
-                                <li itemprop="itemOffered">Site vitrine</li>
-                                <li itemprop="itemOffered">Blog</li>
-                                <li itemprop="itemOffered">Portfolio</li>
-                                <li itemprop="itemOffered">...</li>
+                                <li itemProp="itemOffered">Site vitrine</li>
+                                <li itemProp="itemOffered">Blog</li>
+                                <li itemProp="itemOffered">Portfolio</li>
+                                <li itemProp="itemOffered">...</li>
                             </ul>
-                            <p itemprop="price">200€ / Jours</p>
+                            <p itemProp="price">200€ / Jours</p>
                         </div>
                     </a>
                 </div>
             </div>
-            <div className='tarif-formule-sur-mesure' itemscope itemtype="http://schema.org/Offer">
+            <div className='tarif-formule-sur-mesure' itemScope itemType="http://schema.org/Offer">
                 <span className='tarif-placeholder'>
-                    <img src={Placeholder} alt="placeholder-Tarif-sur-mesure" loading='lazy' itemprop="image" />
+                    <img src={Placeholder} alt="placeholder-Tarif-sur-mesure" loading='lazy' itemProp="image" />
                 </span>
-                <h2 className='en-travaux' itemprop="name">Fonction de devis dynamique en travaux</h2>
+                <h2 className='en-travaux' itemProp="name">Fonction de devis dynamique en travaux</h2>
             </div>
         </>
     );

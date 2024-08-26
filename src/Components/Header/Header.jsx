@@ -39,8 +39,8 @@ const Header = () => {
     }, []);
 
     return (
-        <header itemscope itemtype="http://schema.org/WPHeader">
-            <img src={Logo} alt="Company-Logo" className="Logo-Company" loading="lazy" itemprop="logo" />
+        <header itemScope itemType="http://schema.org/WPHeader">
+            <img src={Logo} alt="Company-Logo" className="Logo-Company" loading="lazy" itemProp="logo" />
             {menuVisible ? (
                 <button className="cross" onClick={toggleMenu}>&#735;</button>
             ) : (
@@ -50,17 +50,17 @@ const Header = () => {
                 </div>
             )}
             {menuVisible && (
-                <div className={`menu ${menuVisible ? 'menuVisible' : ''}`} itemscope itemtype="http://schema.org/SiteNavigationElement">
+                <div className={`menu ${menuVisible ? 'menuVisible' : ''}`} itemScope itemType="http://schema.org/SiteNavigationElement">
                     <ul>
-                        <a href="/" itemprop="url"><li itemprop="name">ACCUEIL</li></a>
+                        <a href="/" itemProp="url"><li itemProp="name">ACCUEIL</li></a>
                         {location.pathname === '/' && (
                             <>
-                                <a href="#works" onClick={(e) => scrollToSection(e, '#works')} itemprop="url"><li itemprop="name">REALISATIONS</li></a>
-                                <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} itemprop="url"><li itemprop="name">CONTACT</li></a>
+                                <a href="#works" onClick={(e) => scrollToSection(e, '#works')} itemProp="url"><li itemProp="name">REALISATIONS</li></a>
+                                <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} itemProp="url"><li itemProp="name">CONTACT</li></a>
                             </>
                         )}
-                        <a href="/tarif" onClick={toggleMenu} itemprop="url"><li itemprop="name">TARIFICATION</li></a>
-                        <a href="/mentions" onClick={toggleMenu} itemprop="url"><li itemprop="name">MENTIONS LEGALES</li></a>
+                        <a href="/tarif" onClick={toggleMenu} itemProp="url"><li itemProp="name">TARIFICATION</li></a>
+                        <a href="/mentions" onClick={toggleMenu} itemProp="url"><li itemProp="name">MENTIONS LEGALES</li></a>
                     </ul>
                 </div>
             )}

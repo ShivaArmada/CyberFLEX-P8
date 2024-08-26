@@ -3,7 +3,7 @@ import './Mentions.css';
 
 function MentionsText() {
     return (
-        <div className='mentions' itemscope itemType='http://schema.org/WebPage'>
+        <div className='mentions' itemScope itemType='http://schema.org/WebPage'>
         <div className='whoami mentions-container'>
             <h1 itemProp='headline'>Mentions Légales</h1>
 

@@ -1,8 +1,0 @@
-void 0 === window._axcb && (window._axcb = []);
-window._axcb.push(function(axeptio) {
-  axeptio.on("cookies:complete", function(choices) {
-    
-  })
-})
-
--- pour les confirmations de cookies axeptio => utile pour la gestion de devis automatique (garde les infos si n'est pas validé)

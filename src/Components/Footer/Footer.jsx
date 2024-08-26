@@ -47,7 +47,7 @@ function NewsletterForm() {
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        itemprop="email"
+        itemProp="email"
       />
       <button type="submit" className="newsletter--button">
         Newsletter
@@ -83,33 +83,33 @@ const Footer = () => {
   };
 
   return (
-    <footer itemscope itemtype="http://schema.org/WPFooter">
-      <div className="Footer-ensemble" itemscope itemtype="http://schema.org/Organization">
+    <footer itemScope itemType="http://schema.org/WPFooter">
+      <div className="Footer-ensemble" itemScope itemType="http://schema.org/Organization">
         <span className="Back--top" onClick={scrollToTop}>
           <a className="back-to-top">
             <FontAwesomeIcon icon={faArrowUp} className="top-arrow" />
           </a>
         </span>
         <div className="milieu-footer">
-          <img src={logobw} alt="logo-company-black-white" loading="lazy" itemprop="logo" />
+          <img src={logobw} alt="logo-company-black-white" loading="lazy" itemProp="logo" />
         </div>
         <div className="droite-footer">
           <a href="https://app.voxiplan.com/s/9991590578" className="horaires-link">
             <p>Horaires: 9h-12h / 14h-18h <span className="logo--voxiplan"><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span></p>
           </a>
-          <p itemprop="url">www.cyberflex.fr</p>
+          <p itemProp="url">www.cyberflex.fr</p>
           <NewsletterForm />
           <span className="svg-footer-social">
-            <a href="https://www.facebook.com/profile.php?id=61563887240558" target="blank" itemprop="sameAs">
+            <a href="https://www.facebook.com/profile.php?id=61563887240558" target="blank" itemProp="sameAs">
               <FontAwesomeIcon icon={faSquareFacebook} />
             </a>
-            <a href="https://x.com/ArmadaShiva" target="blank" itemprop="sameAs">
+            <a href="https://x.com/ArmadaShiva" target="blank" itemProp="sameAs">
               <FontAwesomeIcon icon={faSquareTwitter} />
             </a>
-            <a href="https://www.linkedin.com/in/cyberflex/" target="blank" itemprop="sameAs">
+            <a href="https://www.linkedin.com/in/cyberflex/" target="blank" itemProp="sameAs">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href="https://github.com/ShivaArmada" target="blank" itemprop="sameAs">
+            <a href="https://github.com/ShivaArmada" target="blank" itemProp="sameAs">
               <FontAwesomeIcon icon={faSquareGithub} />
             </a>
           </span>
@@ -117,7 +117,7 @@ const Footer = () => {
 
         <div className="bas-footer">
           <p>
-            <span id="copyright">©</span> <span itemprop="copyrightYear">2024</span> <span itemprop="name">CyberFLEX</span> - Tout droits réservés
+            <span id="copyright">©</span> <span itemProp="copyrightYear">2024</span> <span itemProp="name">CyberFLEX</span> - Tout droits réservés
           </p>
         </div>
       </div>

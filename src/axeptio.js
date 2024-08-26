@@ -1,5 +1,5 @@
 // axeptio.js
-
+/*
 window.axeptioSettings = {
   clientId: "66ac283f88d34fcf2c27efe0",
   cookiesVersion: "cyberflex-fr-EU-2",
@@ -44,4 +44,4 @@ window._axcb.push(function(axeptio) {
       })) + "; path=/; max-age=86400"; // 1 jour
     }
   });
-});
+}); */
