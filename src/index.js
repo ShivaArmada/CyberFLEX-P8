@@ -5,7 +5,7 @@ import TagManager from 'react-gtm-module';
 import reportWebVitals from "./reportWebVitals";
 import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 import './index.css';
-import './cookieManager'; // Importation du gestionnaire de cookies
+import './axeptio'; 
 import Home from './Routes/Home';
 
 if (process.env.NODE_ENV === 'production') {
@@ -17,28 +17,6 @@ const tagManagerArgs = {
 };
 
 TagManager.initialize(tagManagerArgs);
-
-window.axeptioSettings = {
-  clientId: "66ac283f88d34fcf2c27efe0",
-  cookiesVersion: "cyberflex-fr-EU-2",
-  googleConsentMode: {
-    default: {
-      analytics_storage: "denied",
-      ad_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied",
-      wait_for_update: 500,
-    },
-  },
-};
-
-(function (d, s) {
-  var t = d.getElementsByTagName(s)[0],
-    e = d.createElement(s);
-  e.async = true;
-  e.src = "//static.axept.io/sdk.js";
-  t.parentNode.insertBefore(e, t);
-})(document, "script");
 
 // Lazy loading des routes
 const Notfound = lazy(() => import('./Routes/Notfound'));
@@ -73,20 +51,3 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
-
-// Gestion des cookies avec Axeptio
-void 0 === window._axcb && (window._axcb = []);
-window._axcb.push(function(axeptio) {
-  axeptio.on("cookies:complete", function(choices) {
-    if (choices.consents.devis_cookie) {
-      // Charger les pages secondaires après consentement
-      setTimeout(() => {
-        import('./Routes/Mentions');
-        import('./Routes/Notfound');
-        import('./Routes/Tarif');
-      }, 3000); // Charger après 3 secondes
-    } else {
-      console.log("L'utilisateur n'a pas consenti aux cookies pour la gestion des devis.");
-    }
-  });
-});
