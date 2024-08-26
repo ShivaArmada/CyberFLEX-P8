@@ -24,9 +24,9 @@ const Whoami = () => {
 
   return (
     <>
-      <div className="whoami whoami--intro">
-        <h1>Qui suis-je ?</h1>
-        <p className="whoami--intro--text">
+      <div className="whoami whoami--intro" itemscope itemtype="http://schema.org/Person">
+        <h2 className="whoami--intro--title">Qui suis-je ?</h2>
+        <p className="whoami--intro--text" itemprop="description">
           Depuis mon enfance, la technologie m&apos;a toujours fasciné, des
           premiers jeux sur PC à la réparation d&apos;ordinateurs.
           Aujourd&apos;hui, ce parcours m&apos;amène à créer des expériences web

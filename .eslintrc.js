@@ -9,6 +9,7 @@ module.exports = {
     'no-sequences': 'off',
     'no-unused-expressions': 'off',
     'react/prop-types': 'off',
+    'react/no-unknown-property': ['error', { ignore: ['itemscope', 'itemtype', 'itemprop'] }],
   },
   parserOptions: {
     ecmaVersion: 2020,

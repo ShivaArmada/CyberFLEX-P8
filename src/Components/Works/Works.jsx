@@ -123,7 +123,7 @@ const Works = () => {
       <div id="works" className="whoami">
         <h2>Mes réalisations</h2>
       </div>
-      <div className="works--container">
+      <div className="works--container" itemscope itemtype="http://schema.org/ItemList">
         {dataAbout.slice(0, visibleProjects).map((project) => (
           <div
             key={project.id}
@@ -135,8 +135,11 @@ const Works = () => {
             id={`project-${project.id}`}
             tabIndex={-1}
             onClick={() => handleProjectClick(project.id)}
+            itemprop="itemListElement"
+            itemscope
+            itemtype="http://schema.org/CreativeWork"
           >
-            <h2 className="works--title--project">{project.title}</h2>
+            <h2 className="works--title--project" itemprop="headline">{project.title}</h2>
             <div className="works--picture-container">
               <img
                 src={project.picture}
@@ -144,14 +147,15 @@ const Works = () => {
                 className="works--picture"
                 id={`project-${project.id}`}
                 loading="lazy"
+                itemprop="image"
               />
             </div>
             <div className="works-content-container">
-              <p className="works-content-text">{project.content}</p>
+              <p className="works-content-text" itemprop="about">{project.content}</p>
             </div>
             <div className="tags">
               {project.tags.map((tag, index) => (
-                <span key={index} className="tag">
+                <span key={index} className="tag" itemprop="keywords">
                   {tag}
                 </span>
               ))}
@@ -160,6 +164,7 @@ const Works = () => {
               className={`dropdown-content ${
                 selectedProjectId === project.id ? "visible" : "hidden"
               }`}
+              itemprop="description"
             >
               <p className="works-content-text" id="works-drop-text">
                 {project.description}
@@ -175,19 +180,21 @@ const Works = () => {
                       id={`project-${project.id}-${index}`}
                       onClick={() => handleImageClick(pic)}
                       loading="lazy"
+                      itemprop="image"
                     />
                   ))}
               </div>
               <span className="github_link">
-            <a
-              href={project.github_link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link"
-            >
-              <FontAwesomeIcon icon={faSquareGithub} size="2x" className="github_link_logo"/>
-            </a>
-            </span>
+                <a
+                  href={project.github_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="github-link"
+                  itemprop="url"
+                >
+                  <FontAwesomeIcon icon={faSquareGithub} size="2x" className="github_link_logo"/>
+                </a>
+              </span>
             </div>
             <span className="works-icon">
               <FontAwesomeIcon

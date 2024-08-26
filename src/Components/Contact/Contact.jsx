@@ -49,12 +49,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact--section">
+    <div className="contact--section" itemscope itemtype="http://schema.org/ContactPoint">
       <div className="contact--panel">
         <div className="contact--header">
           <h3 className="contact--message">
             <FontAwesomeIcon icon={faEnvelope} className="contact--logo" id="contact"/>
-            Contactez-moi
+            <span itemprop="contactType">Contactez-moi</span>
           </h3>
           <p>
             Les informations envoyées via ce formulaire sont utilisées pour vous
@@ -62,7 +62,7 @@ const Contact = () => {
             ne sont pas utilisées à des fins commerciales ou publicitaires.
           </p>
         </div>
-        <form className="contact--form" onSubmit={handleSubmit}>
+        <form className="contact--form" onSubmit={handleSubmit} itemprop="contactOption">
           <fieldset>
             <div className="contact--row">
               <div className="contact--prenom">
@@ -77,6 +77,7 @@ const Contact = () => {
                   value={formData.prenom}
                   onChange={handleChange}
                   required
+                  itemprop="givenName"
                 />
               </div>
               <div className="contact--nom">
@@ -91,6 +92,7 @@ const Contact = () => {
                   value={formData.nom}
                   onChange={handleChange}
                   required
+                  itemprop="familyName"
                 />
               </div>
             </div>
@@ -107,6 +109,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                itemprop="email"
               />
             </div>
             <div className="contact--textarea">
@@ -121,6 +124,7 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                itemprop="message"
               ></textarea>
             </div>
             <div className="contact--confirmation">

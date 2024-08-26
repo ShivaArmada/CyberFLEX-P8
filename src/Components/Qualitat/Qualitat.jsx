@@ -5,42 +5,42 @@ import { faSeedling, faPalette, faHandshake } from "@fortawesome/free-solid-svg-
 
 const Qualitat = () => {
   return (
-    <div className="qualitat--section">
-      <div className="qualitat--panel">
+    <div className="qualitat--section" itemscope itemtype="http://schema.org/ItemList">
+      <div className="qualitat--panel" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <div className="qualitat--header">
-          <h3 className="qualitat--message">
+          <h3 className="qualitat--message" itemprop="name">
             <FontAwesomeIcon icon={faSeedling} className="qualitat--logo" />
             Nouvelle Pousse
           </h3>
         </div>
-        <p>
+        <p itemprop="description">
           En tant que nouveau talent dans le domaine du développement web, je
           représente un investissement prometteur avec un potentiel infini pour
           votre entreprise.
         </p>
       </div>
-      <div className="qualitat--panel">
+      <div className="qualitat--panel" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <div className="qualitat--header">
-          <h3 className="qualitat--message">
+          <h3 className="qualitat--message" itemprop="name">
             <FontAwesomeIcon icon={faPalette} className="qualitat--logo" />
             Artistique
           </h3>
         </div>
-        <p>
+        <p itemprop="description">
           Des millions de designs, des milliers de façons de faire, des
           centaines de bonnes idées. Partageons la tâche ensemble :<br></br>
           j&apos;apporterai des idées pour que, ensemble, nous façonnions vos
           projets.
         </p>
       </div>
-      <div className="qualitat--panel">
+      <div className="qualitat--panel" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <div className="qualitat--header">
-          <h3 className="qualitat--message">
+          <h3 className="qualitat--message" itemprop="name">
             <FontAwesomeIcon icon={faHandshake} className="qualitat--logo" />
             Commercial
           </h3>
         </div>
-        <p className="qualitat--commercial">
+        <p className="qualitat--commercial" itemprop="description">
           Chez CyberFLEX, nous combinons expertise commerciale et sens du
           relationnel pour créer des solutions qui font la différence, pour
           vous.

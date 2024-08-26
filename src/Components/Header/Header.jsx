@@ -39,8 +39,8 @@ const Header = () => {
     }, []);
 
     return (
-        <header>
-            <img src={Logo} alt="Company-Logo" className="Logo-Company" loading="lazy" />
+        <header itemscope itemtype="http://schema.org/WPHeader">
+            <img src={Logo} alt="Company-Logo" className="Logo-Company" loading="lazy" itemprop="logo" />
             {menuVisible ? (
                 <button className="cross" onClick={toggleMenu}>&#735;</button>
             ) : (
@@ -50,17 +50,17 @@ const Header = () => {
                 </div>
             )}
             {menuVisible && (
-                <div className={`menu ${menuVisible ? 'menuVisible' : ''}`}>
+                <div className={`menu ${menuVisible ? 'menuVisible' : ''}`} itemscope itemtype="http://schema.org/SiteNavigationElement">
                     <ul>
-                        <a href="/" ><li>ACCUEIL</li></a>
+                        <a href="/" itemprop="url"><li itemprop="name">ACCUEIL</li></a>
                         {location.pathname === '/' && (
                             <>
-                                <a href="#works" onClick={(e) => scrollToSection(e, '#works')}><li>REALISATIONS</li></a>
-                                <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')}><li>CONTACT</li></a>
+                                <a href="#works" onClick={(e) => scrollToSection(e, '#works')} itemprop="url"><li itemprop="name">REALISATIONS</li></a>
+                                <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} itemprop="url"><li itemprop="name">CONTACT</li></a>
                             </>
                         )}
-                        <a href="/tarif" onClick={toggleMenu}><li>TARIFICATION</li></a>
-                        <a href="/mentions" onClick={toggleMenu}><li>MENTIONS LEGALES</li></a>
+                        <a href="/tarif" onClick={toggleMenu} itemprop="url"><li itemprop="name">TARIFICATION</li></a>
+                        <a href="/mentions" onClick={toggleMenu} itemprop="url"><li itemprop="name">MENTIONS LEGALES</li></a>
                     </ul>
                 </div>
             )}

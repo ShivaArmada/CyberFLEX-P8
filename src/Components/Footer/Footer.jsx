@@ -47,6 +47,7 @@ function NewsletterForm() {
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        itemprop="email"
       />
       <button type="submit" className="newsletter--button">
         Newsletter
@@ -82,33 +83,33 @@ const Footer = () => {
   };
 
   return (
-    <footer>
-      <div className="Footer-ensemble">
+    <footer itemscope itemtype="http://schema.org/WPFooter">
+      <div className="Footer-ensemble" itemscope itemtype="http://schema.org/Organization">
         <span className="Back--top" onClick={scrollToTop}>
           <a className="back-to-top">
             <FontAwesomeIcon icon={faArrowUp} className="top-arrow" />
           </a>
         </span>
         <div className="milieu-footer">
-          <img src={logobw} alt="logo-company-black-white" loading="lazy" />
+          <img src={logobw} alt="logo-company-black-white" loading="lazy" itemprop="logo" />
         </div>
         <div className="droite-footer">
           <a href="https://app.voxiplan.com/s/9991590578" className="horaires-link">
             <p>Horaires: 9h-12h / 14h-18h <span className="logo--voxiplan"><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span></p>
           </a>
-          <p>www.cyberflex.fr</p>
+          <p itemprop="url">www.cyberflex.fr</p>
           <NewsletterForm />
           <span className="svg-footer-social">
-            <a href="https://www.facebook.com/profile.php?id=61563887240558" target="blank">
+            <a href="https://www.facebook.com/profile.php?id=61563887240558" target="blank" itemprop="sameAs">
               <FontAwesomeIcon icon={faSquareFacebook} />
             </a>
-            <a href="https://x.com/ArmadaShiva" target="blank">
+            <a href="https://x.com/ArmadaShiva" target="blank" itemprop="sameAs">
               <FontAwesomeIcon icon={faSquareTwitter} />
             </a>
-            <a href="https://www.linkedin.com/in/cyberflex/" target="blank">
+            <a href="https://www.linkedin.com/in/cyberflex/" target="blank" itemprop="sameAs">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href="https://github.com/ShivaArmada" target="blank">
+            <a href="https://github.com/ShivaArmada" target="blank" itemprop="sameAs">
               <FontAwesomeIcon icon={faSquareGithub} />
             </a>
           </span>
@@ -116,7 +117,7 @@ const Footer = () => {
 
         <div className="bas-footer">
           <p>
-            <span id="copyright">©</span> 2024 CyberFLEX - Tout droits réservés
+            <span id="copyright">©</span> <span itemprop="copyrightYear">2024</span> <span itemprop="name">CyberFLEX</span> - Tout droits réservés
           </p>
         </div>
       </div>
