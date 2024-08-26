@@ -49,11 +49,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact--section" itemscope itemtype="http://schema.org/ContactPoint">
-      <div className="contact--panel">
-        <div className="contact--header">
-          <h3 className="contact--message">
-            <FontAwesomeIcon icon={faEnvelope} className="contact--logo" id="contact"/>
+    <div className="contact__section" itemscope itemtype="http://schema.org/ContactPoint">
+      <div className="contact__panel">
+        <div className="contact__panel--header">
+          <h3 className="contact__panel--message">
+            <FontAwesomeIcon icon={faEnvelope} className="contact__panel--logo" id="contact"/>
             <span itemprop="contactType">Contactez-moi</span>
           </h3>
           <p>
@@ -62,10 +62,10 @@ const Contact = () => {
             ne sont pas utilisées à des fins commerciales ou publicitaires.
           </p>
         </div>
-        <form className="contact--form" onSubmit={handleSubmit} itemprop="contactOption">
-          <fieldset>
-            <div className="contact--row">
-              <div className="contact--prenom">
+        <form className="contact__form" onSubmit={handleSubmit} itemprop="contactOption">
+          <fieldset id="contact__form--field">
+            <div className="contact__form--row">
+              <div className="contact__form--prenom">
                 <label htmlFor="prenom">
                   <h3><span className="red-asterisk">*</span> Prénom</h3>
                 </label>
@@ -80,7 +80,7 @@ const Contact = () => {
                   itemprop="givenName"
                 />
               </div>
-              <div className="contact--nom">
+              <div className="contact__form--nom">
                 <label htmlFor="nom">
                   <h3><span className="red-asterisk">*</span> Nom</h3>
                 </label>
@@ -97,7 +97,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="contact--email">
+            <div className="contact__form--email">
               <label htmlFor="email">
                 <h3><span className="red-asterisk">*</span> Email</h3>
               </label>
@@ -112,7 +112,7 @@ const Contact = () => {
                 itemprop="email"
               />
             </div>
-            <div className="contact--textarea">
+            <div className="contact__form--textarea">
               <label htmlFor="message">
                 <h3><span className="red-asterisk">*</span> Message</h3>
               </label>
@@ -127,7 +127,7 @@ const Contact = () => {
                 itemprop="message"
               ></textarea>
             </div>
-            <div className="contact--confirmation">
+            <div className="contact__form--confirmation">
               <label htmlFor="check">
                 j&apos;accepte de soumettre mes informations personelles via ce
                 formulaire.
