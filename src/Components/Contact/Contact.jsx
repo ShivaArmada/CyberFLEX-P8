@@ -29,7 +29,7 @@ const Contact = () => {
     }
   
     try {
-      const response = await fetch('http://localhost:5000/api/send-email', { // Mise à jour de l'URL
+      const response = await fetch('https://backend-cyberflex.onrender.com/api/send-email', { // Mise à jour de l'URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
