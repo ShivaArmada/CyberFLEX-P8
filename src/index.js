@@ -41,6 +41,7 @@ root.render(
 
 reportWebVitals();
 
+/*
 // Enregistrement du Service Worker pour mettre en cache les images
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
@@ -50,4 +51,4 @@ if ('serviceWorker' in navigator) {
       console.log('Échec de l\'enregistrement du Service Worker :', err);
     });
   });
-}
+} */
