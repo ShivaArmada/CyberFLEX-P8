@@ -30,6 +30,7 @@ const dataAbout = [
     tags: ["HTML", "CSS"],
     description: "Pour la start-up Booki, j'ai travaillé sur la création de la page d'accueil de leur agence de voyage. L'objectif était de concevoir une interface responsive en utilisant HTML et CSS, tout en respectant les maquettes fournies pour les versions mobile, tablette et desktop. Le projet a été estimé à 80 heures de travail. La maîtrise des techniques de création d'interfaces web responsives est indispensable pour un développeur front-end. Ces compétences garantissent une expérience utilisateur optimale sur tous les types d'appareils, un aspect crucial pour la réussite de tout site web ou application.",
     picdescription: [P21, P22],
+    github_link: "a",
   },
   {
     id: 2,

@@ -5,4 +5,4 @@ window._axcb.push(function(axeptio) {
   })
 })
 
--- pour les comfirmations de cookies axeptio
+-- pour les confirmations de cookies axeptio => utile pour la gestion de devis automatique (garde les infos si n'est pas validé)

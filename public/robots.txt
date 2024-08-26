@@ -1,3 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+Sitemap: https://cyber-flex-p8.vercel.app/sitemap.xml
