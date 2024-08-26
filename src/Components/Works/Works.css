@@ -286,3 +286,14 @@ margin-bottom: 0;
     text-align: center; /* Center the text horizontally */
     font-size: 1.3em;
 }
+
+.github_link_logo {
+
+    text-align: center; /* Center the text horizontally */
+    font-size: 3em;
+    padding-top: 30px;
+    color :  blueviolet;
+}
+.github_link_logo:hover {
+    color: darkgoldenrod;
+}

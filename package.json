@@ -32,14 +32,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"react-scripts start\"",
+    "start": "react-scripts start",
     "server": "node Backend/Server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
-    "release": "release-it",
-    "deploy-ftp": "node deploy-ftp.js"
+    "release": "release-it"
   },
   "eslintConfig": {
     "extends": [

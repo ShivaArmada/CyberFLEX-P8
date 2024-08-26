@@ -5,6 +5,9 @@ import {
   faSquareCaretUp,
   faSquareCaretDown,
 } from "@fortawesome/free-regular-svg-icons";
+import {
+  faSquareGithub,
+} from "@fortawesome/free-brands-svg-icons";
 import P2 from "../../Assets/ProjetsPic/P2.webp";
 import P3 from "../../Assets/ProjetsPic/P3.webp";
 import P4 from "../../Assets/ProjetsPic/P4.webp";
@@ -28,9 +31,10 @@ const dataAbout = [
     picture: P2,
     content: "Booki - Frontend",
     tags: ["HTML", "CSS"],
-    description: "Pour la start-up Booki, j'ai travaillé sur la création de la page d'accueil de leur agence de voyage. L'objectif était de concevoir une interface responsive en utilisant HTML et CSS, tout en respectant les maquettes fournies pour les versions mobile, tablette et desktop. Le projet a été estimé à 80 heures de travail. La maîtrise des techniques de création d'interfaces web responsives est indispensable pour un développeur front-end. Ces compétences garantissent une expérience utilisateur optimale sur tous les types d'appareils, un aspect crucial pour la réussite de tout site web ou application.",
+    description:
+      "Pour la start-up Booki, j'ai travaillé sur la création de la page d'accueil de leur agence de voyage. L'objectif était de concevoir une interface responsive en utilisant HTML et CSS, tout en respectant les maquettes fournies pour les versions mobile, tablette et desktop. Le projet a été estimé à 80 heures de travail. La maîtrise des techniques de création d'interfaces web responsives est indispensable pour un développeur front-end. Ces compétences garantissent une expérience utilisateur optimale sur tous les types d'appareils, un aspect crucial pour la réussite de tout site web ou application.",
     picdescription: [P21, P22],
-    github_link: "a",
+    github_link: "https://github.com/ShivaArmada/Booki-main",
   },
   {
     id: 2,
@@ -38,8 +42,11 @@ const dataAbout = [
     picture: P3,
     content: "Sophie Bluel - Login- Popup",
     tags: ["HTML", "CSS", "JavaScript"],
-    description: "En tant que développeur front-end pour l'agence ArchiWebos, qui compte 50 salariés, j'ai récemment achevé mon dernier projet en avance. On m'a donc assigné à une équipe travaillant sur la création du site portfolio d'une architecte d'intérieur. Ce lundi matin, j'ai participé à mon premier brief d'équipe, où j'ai reçu toutes les informations nécessaires pour démarrer le projet. La création de pages web dynamiques avec JavaScript est une compétence essentielle pour un développeur front-end. Savoir gérer les interactions utilisateur et communiquer avec des APIs est indispensable pour concevoir des sites web interactifs et fonctionnels. Ces compétences me préparent à relever des défis plus complexes dans le domaine du développement web et à augmenter ma valeur en tant que développeur front-end.",
+    description:
+      "En tant que développeur front-end pour l'agence ArchiWebos, qui compte 50 salariés, j'ai récemment achevé mon dernier projet en avance. On m'a donc assigné à une équipe travaillant sur la création du site portfolio d'une architecte d'intérieur. Ce lundi matin, j'ai participé à mon premier brief d'équipe, où j'ai reçu toutes les informations nécessaires pour démarrer le projet. La création de pages web dynamiques avec JavaScript est une compétence essentielle pour un développeur front-end. Savoir gérer les interactions utilisateur et communiquer avec des APIs est indispensable pour concevoir des sites web interactifs et fonctionnels. Ces compétences me préparent à relever des défis plus complexes dans le domaine du développement web et à augmenter ma valeur en tant que développeur front-end.",
     picdescription: [P31, P32],
+    github_link:
+      "https://github.com/ShivaArmada/Portfolio-architecte-sophie-bluel-master",
   },
   {
     id: 3,
@@ -47,8 +54,10 @@ const dataAbout = [
     picture: P4,
     content: "Nina Carducci - Optimisation SEO",
     tags: ["HTML", "SEO", "CSS", "Design"],
-    description: "Dans ce projet, j'interviens en tant que développeur freelance pour optimiser le site web de Nina Carducci, photographe, avec pour objectif d'améliorer ses performances, son référencement (SEO) et son accessibilité. La maîtrise des techniques d'optimisation SEO et d'accessibilité est cruciale pour maximiser la visibilité et l'accessibilité des sites web, tout en enrichissant l'expérience utilisateur et la satisfaction des clients. Ces compétences sont très recherchées dans le secteur du développement web.",
+    description:
+      "Dans ce projet, j'interviens en tant que développeur freelance pour optimiser le site web de Nina Carducci, photographe, avec pour objectif d'améliorer ses performances, son référencement (SEO) et son accessibilité. La maîtrise des techniques d'optimisation SEO et d'accessibilité est cruciale pour maximiser la visibilité et l'accessibilité des sites web, tout en enrichissant l'expérience utilisateur et la satisfaction des clients. Ces compétences sont très recherchées dans le secteur du développement web.",
     picdescription: [P41, P42],
+    github_link: "https://github.com/ShivaArmada/Nina-Shiva-soutenance",
   },
   {
     id: 4,
@@ -56,8 +65,10 @@ const dataAbout = [
     picture: P5,
     content: "Kasa - React app",
     tags: ["React", "Styled-components", "Sass"],
-    description: "Kasa, un acteur majeur de l'industrie, s'est lancé dans la refonte de son ancien site, autrefois bâti sur ASP.NET, en adoptant une stack JavaScript moderne, avec React pour le front-end et Node.js pour le back-end. Ma mission est de lancer ce projet en respectant les maquettes Figma élaborées par le designer Paul, tout en développant les composants et routes nécessaires. Ce projet représente une opportunité d'affiner des compétences clés en développement web, notamment la maîtrise de React et de React Router, ainsi que l'utilisation de Sass pour la gestion du CSS. Ces compétences sont hautement valorisées dans l'industrie pour la création d'applications interactives et réactives.",
+    description:
+      "Kasa, un acteur majeur de l'industrie, s'est lancé dans la refonte de son ancien site, autrefois bâti sur ASP.NET, en adoptant une stack JavaScript moderne, avec React pour le front-end et Node.js pour le back-end. Ma mission est de lancer ce projet en respectant les maquettes Figma élaborées par le designer Paul, tout en développant les composants et routes nécessaires. Ce projet représente une opportunité d'affiner des compétences clés en développement web, notamment la maîtrise de React et de React Router, ainsi que l'utilisation de Sass pour la gestion du CSS. Ces compétences sont hautement valorisées dans l'industrie pour la création d'applications interactives et réactives.",
     picdescription: [P51, P52],
+    github_link: "https://github.com/ShivaArmada/react-code-kasa",
   },
   {
     id: 6,
@@ -68,6 +79,7 @@ const dataAbout = [
     description:
       "Une application web de gestion de bibliothèque permettant de consulter, ajouter, modifier et supprimer des livres. L'application est responsive et développée en HTML et CSS. Ma mission était de développer le backend avec Node.js, Express et MongoDB, en créant une API RESTful pour gérer les livres et une base de données MongoDB pour les stocker.",
     picdescription: [P61, P62],
+    github_link: "https://github.com/ShivaArmada/p6-Backend-Fullstack",
   },
 ];
 
@@ -77,7 +89,9 @@ const Works = () => {
 
   useEffect(() => {
     if (selectedProjectId !== null) {
-      const activeElement = document.getElementById(`project-${selectedProjectId}`);
+      const activeElement = document.getElementById(
+        `project-${selectedProjectId}`
+      );
       if (activeElement) {
         activeElement.scrollIntoView({ behavior: "smooth" });
       }
@@ -164,6 +178,16 @@ const Works = () => {
                     />
                   ))}
               </div>
+              <span className="github_link">
+            <a
+              href={project.github_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+              <FontAwesomeIcon icon={faSquareGithub} size="2x" className="github_link_logo"/>
+            </a>
+            </span>
             </div>
             <span className="works-icon">
               <FontAwesomeIcon
