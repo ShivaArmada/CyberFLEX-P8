@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import TagManager from 'react-gtm-module';
 import reportWebVitals from "./reportWebVitals";
 import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 import './index.css';
@@ -12,11 +11,16 @@ if (process.env.NODE_ENV === 'production') {
   disableReactDevTools();
 }
 
-const tagManagerArgs = {
-  gtmId: 'GTM-KH8B3GBQ'  // Remplacez par votre ID de conteneur GTM
-};
-
-TagManager.initialize(tagManagerArgs);
+(function(d, w, c) {
+    w.BrevoConversationsID = '66be92ecb1891b1ee904d134';
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    var s = d.createElement('script');
+    s.async = true;
+    s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'BrevoConversations');
 
 // Lazy loading des routes
 const Notfound = lazy(() => import('./Routes/Notfound'));
