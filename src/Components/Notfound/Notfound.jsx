@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Notfound.css";
-import NotfoundLogo from "../../Assets/dosomething-404.png";
+import NotfoundLogo from "../../Assets/dosomething-404.webp";
 
 const NotFound = () => {
   return (

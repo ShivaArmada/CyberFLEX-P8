@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faArrowUp, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"; // Importation de l'icône fa-arrow-up
 import "./Footer.css";
-import logobw from "../../Assets/bwlogo.png";
+import logobw from "../../Assets/bwlogo.webp";
 
 function NewsletterForm() {
   const [email, setEmail] = useState("");

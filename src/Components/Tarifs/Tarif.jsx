@@ -1,7 +1,7 @@
 import React from 'react';
 import './Tarif.css';
-import Mascotte from '../../Assets/MiniSardocheRobot.png';
-import Placeholder from '../../Assets/Devis-placeholder.png';
+import Mascotte from '../../Assets/MiniSardocheRobot.webp';
+import Placeholder from '../../Assets/Devis-placeholder.webp';
 
 const Tarif = () => {
     return (

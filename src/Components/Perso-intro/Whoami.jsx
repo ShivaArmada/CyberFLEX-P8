@@ -1,14 +1,14 @@
 import React from "react";
 import "./Whoami.css";
 import Carousel from "./Carousel";
-import HTML5 from "../../Assets/Devicons/HTML.png";
-import CSS3 from "../../Assets/Devicons/CSS.png";
-import JavaScript from "../../Assets/Devicons/JS.png";
-import ReactLogo from "../../Assets/Devicons/React.png";
-import Node from "../../Assets/Devicons/Node.png";
-import Express from "../../Assets/Devicons/Express.png";
-import MongoDB from "../../Assets/Devicons/MANGODB.png";
-import Github from "../../Assets/Devicons/GitHubA.png";
+import HTML5 from "../../Assets/Devicons/HTML.webp";
+import CSS3 from "../../Assets/Devicons/CSS.webp";
+import JavaScript from "../../Assets/Devicons/JS.webp";
+import ReactLogo from "../../Assets/Devicons/React.webp";
+import Node from "../../Assets/Devicons/Node.webp";
+import Express from "../../Assets/Devicons/Express.webp";
+import MongoDB from "../../Assets/Devicons/MANGODB.webp";
+import Github from "../../Assets/Devicons/GitHubA.webp";
 
 const Whoami = () => {
   const items = [

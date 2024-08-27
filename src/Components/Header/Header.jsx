@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./Header.css";
-import Logo from "../../Assets/CompanyLogo.png";
+import Logo from "../../Assets/CompanyLogo.webp";
 
 const Header = () => {
     const [menuVisible, setMenuVisible] = useState(false);
