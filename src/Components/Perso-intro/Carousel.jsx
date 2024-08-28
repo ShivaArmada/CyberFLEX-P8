@@ -1,5 +1,5 @@
 import React from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { useSpring, animated } from "@react-spring/web";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
@@ -16,14 +16,9 @@ class Carousel extends React.Component {
     this.state = {
       items: props.items || [],
       active: typeof props.active === "number" ? props.active : 0,
-      direction: "",
     };
     this.moveRight = this.moveRight.bind(this);
     this.moveLeft = this.moveLeft.bind(this);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
   }
 
   generateItems() {
@@ -52,21 +47,19 @@ class Carousel extends React.Component {
   moveLeft() {
     this.setState((prevState) => ({
       active: (prevState.active + 1 + prevState.items.length) % prevState.items.length,
-      direction: "left",
     }));
   }
 
   moveRight() {
     this.setState((prevState) => ({
       active: (prevState.active - 1 + prevState.items.length) % prevState.items.length,
-      direction: "right",
     }));
   }
 
   render() {
     const { items } = this.state;
     if (!Array.isArray(items) || items.length === 0) {
-      return null; // Return null if there are no items
+      return null;
     }
 
     return (
@@ -74,13 +67,9 @@ class Carousel extends React.Component {
         <div className="arrow arrow-left" onClick={this.moveLeft}>
           <FontAwesomeIcon icon={faArrowLeft} />
         </div>
-        <TransitionGroup className={`carousel ${this.state.direction}`}>
-          {this.generateItems().map((item) => (
-            <CSSTransition key={item.key} timeout={500} classNames="carousel-item">
-              {item}
-            </CSSTransition>
-          ))}
-        </TransitionGroup>
+        <div className="carousel">
+          {this.generateItems()}
+        </div>
         <div className="arrow arrow-right" onClick={this.moveRight}>
           <FontAwesomeIcon icon={faArrowRight} />
         </div>
@@ -89,17 +78,19 @@ class Carousel extends React.Component {
   }
 }
 
-class Item extends React.Component {
-  render() {
-    const className = `item level${this.props.level}`;
-    return (
-      <div className={className}>
-        <img src={this.props.src} alt={this.props.alt} loading="lazy" />
-        <Popup rating={this.props.rating} />
-      </div>
-    );
-  }
-}
+const Item = ({ src, alt, level, rating }) => {
+  const style = useSpring({
+    transform: `scale(${1 - Math.abs(level) * 0.2})`,
+    opacity: 1 - Math.abs(level) * 0.3,
+  });
+
+  return (
+    <animated.div className={`item level${level}`} style={style}>
+      <img src={src} alt={alt} loading="lazy" />
+      <Popup rating={rating} />
+    </animated.div>
+  );
+};
 
 const Popup = ({ rating }) => {
   const fullStars = Math.floor(rating);
@@ -108,7 +99,6 @@ const Popup = ({ rating }) => {
 
   const stars = [];
 
-  // Ajouter les étoiles pleines
   for (let i = 0; i < fullStars; i++) {
     stars.push(
       <FontAwesomeIcon
@@ -119,7 +109,6 @@ const Popup = ({ rating }) => {
     );
   }
 
-  // Ajouter la demi-étoile s'il y en a une
   if (halfStar) {
     stars.push(
       <FontAwesomeIcon
@@ -130,7 +119,6 @@ const Popup = ({ rating }) => {
     );
   }
 
-  // Ajouter les étoiles vides
   for (let i = 0; i < emptyStars; i++) {
     stars.push(
       <FontAwesomeIcon
