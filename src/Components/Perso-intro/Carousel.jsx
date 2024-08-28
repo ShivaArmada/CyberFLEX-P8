@@ -6,8 +6,8 @@ import {
   faArrowRight,
   faStar,
   faStarHalfAlt,
-  faStar as faStarEmpty,
 } from "@fortawesome/free-solid-svg-icons";
+import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons";
 import "./Carousel.css";
 
 class Carousel extends React.Component {
@@ -93,12 +93,13 @@ const Item = ({ src, alt, level, rating }) => {
 };
 
 const Popup = ({ rating }) => {
-  const fullStars = Math.floor(rating);
-  const halfStar = rating % 1 !== 0;
-  const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+  const fullStars = Math.floor(rating); // Nombre d'étoiles pleines
+  const halfStar = rating % 1 !== 0; // Vérifie s'il y a une demi-étoile
+  const emptyStars = 5 - fullStars - (halfStar ? 1 : 0); // Calcul du nombre d'étoiles vides
 
   const stars = [];
 
+  // Ajouter les étoiles pleines
   for (let i = 0; i < fullStars; i++) {
     stars.push(
       <FontAwesomeIcon
@@ -109,6 +110,7 @@ const Popup = ({ rating }) => {
     );
   }
 
+  // Ajouter la demi-étoile s'il y en a une
   if (halfStar) {
     stars.push(
       <FontAwesomeIcon
@@ -119,6 +121,7 @@ const Popup = ({ rating }) => {
     );
   }
 
+  // Ajouter les étoiles vides
   for (let i = 0; i < emptyStars; i++) {
     stars.push(
       <FontAwesomeIcon

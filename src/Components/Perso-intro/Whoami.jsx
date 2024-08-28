@@ -13,13 +13,13 @@ import Github from "../../Assets/Devicons/GitHubA.webp";
 const Whoami = () => {
   const items = [
     { id: 1, src: HTML5, alt: "HTML5", rating: 5 },
-    { id: 2, src: CSS3, alt: "CSS3", rating: 4.5 },
-    { id: 3, src: JavaScript, alt: "JavaScript", rating: 4 },
+    { id: 2, src: CSS3, alt: "CSS3", rating: 3.5 },
+    { id: 3, src: JavaScript, alt: "JavaScript", rating: 4.5 },
     { id: 4, src: ReactLogo, alt: "React", rating: 4.5 },
     { id: 5, src: Node, alt: "Node.js", rating: 4 },
-    { id: 6, src: Express, alt: "Express", rating: 1 },
+    { id: 6, src: Express, alt: "Express", rating: 3.5 },
     { id: 7, src: MongoDB, alt: "MongoDB", rating: 3 },
-    { id: 8, src: Github, alt: "Github actions", rating: 4 },
+    { id: 8, src: Github, alt: "Github actions", rating: 3.5 },
   ];
 
   return (
