@@ -20,7 +20,9 @@
 - **React** : Utilisé pour le développement frontend.
 - **OVH** : Utilisé pour obtenir le nom de domaine.
 - **Cloudflare** : Pour la redirection d'adresse IP (en avoir deux distinctes) et les atk DDOS.
-- **FastComet** : L'hébergement du projet cyberflex.fr .
+- **FastComet** : L'hébergement du projet cyberflex.fr (initialement) .
+- **Vercel** : L'hébergement alternatif en implémentation continue via github .
+- **Render** : L'hébergement du Backend de notre projet .
 - **WinSCP** : Utilisé pour le déploiment sur l'hébergement.
 
 
