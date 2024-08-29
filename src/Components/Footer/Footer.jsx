@@ -15,7 +15,7 @@ function NewsletterForm() {
   const [placeholder, setPlaceholder] = useState("Votre adresse e-mail");
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Empêche le rechargement de la page
+    event.preventDefault(); 
 
     fetch("https://backend-cyberflex.onrender.com/api/subscribe", {
       method: "POST",
@@ -61,7 +61,7 @@ const Footer = () => {
     const handleScroll = () => {
       const footer = document.querySelector('.Footer-ensemble');
       const scrollPosition = window.scrollY + window.innerHeight;
-      const threshold = document.body.offsetHeight - 100; // Ajustez cette valeur selon vos besoins
+      const threshold = document.body.offsetHeight - 100; 
 
       if (scrollPosition >= threshold) {
         footer.classList.add('slide-up');

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './PanelWords.css'; // Assurez-vous d'importer le fichier CSS
+import './PanelWords.css'; 
 
 const PanelWords = () => {
   const messages = [
@@ -19,7 +19,7 @@ const PanelWords = () => {
     if (isPaused) {
       timeout = setTimeout(() => {
         setIsPaused(false);
-      }, isAdding ? 500 : 3000); // Adjust pause duration as needed
+      }, isAdding ? 500 : 3000); // Adjust pause duration here
     } else {
       if (isAdding) {
         if (currentMessage.length < messages[currentMessageIndex].length) {
@@ -31,7 +31,7 @@ const PanelWords = () => {
           setIsPaused(true);
         }
       } else {
-        if (currentMessage.length > 4) {
+        if (currentMessage.length > 4) { // Adjust lenght to start spacing here
           timeout = setTimeout(() => {
             setCurrentMessage(messages[currentMessageIndex].slice(0, currentMessage.length - 1));
           }, 50);

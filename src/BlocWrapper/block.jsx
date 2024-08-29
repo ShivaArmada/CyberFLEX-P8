@@ -1,6 +1,5 @@
-// Block.jsx
 import React, { useEffect } from "react";
-import "./block.css"; // Assurez-vous que le chemin est correct
+import "./block.css"; 
 
 const GradientBackground = () => {
   useEffect(() => {

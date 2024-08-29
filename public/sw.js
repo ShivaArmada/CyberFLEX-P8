@@ -4,14 +4,14 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
-        '/assets/Devicons/CSS.png',
-        '/assets/Devicons/Express.png',
-        '/assets/Devicons/React.png',
-        '/assets/Devicons/Github.png',
-        '/assets/Devicons/HTML.png',
-        '/assets/Devicons/JS.png',
-        '/assets/Devicons/MANGODB.png',
-        '/assets/Devicons/Node.png',
+        '/assets/Devicons/CSS.webp',
+        '/assets/Devicons/Express.webp',
+        '/assets/Devicons/React.webp',
+        '/assets/Devicons/Github.webp',
+        '/assets/Devicons/HTML.webp',
+        '/assets/Devicons/JS.webp',
+        '/assets/Devicons/MANGODB.webp',
+        '/assets/Devicons/Node.webp',
         // Ajoutez ici toutes les images importantes
       ]).catch(function(error) {
         console.error('Failed to cache:', error);

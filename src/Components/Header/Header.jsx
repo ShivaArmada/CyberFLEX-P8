@@ -24,7 +24,7 @@ const Header = () => {
         const handleScroll = () => {
             const footer = document.querySelector('.Footer-ensemble');
             const scrollPosition = window.scrollY + window.innerHeight;
-            const threshold = document.body.offsetHeight - 100; // Ajustez cette valeur selon vos besoins
+            const threshold = document.body.offsetHeight - 100; 
 
             if (scrollPosition >= threshold) {
                 footer.classList.add('slide-up');

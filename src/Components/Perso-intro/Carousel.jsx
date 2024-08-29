@@ -110,7 +110,7 @@ const Popup = ({ rating }) => {
     );
   }
 
-  // Ajouter la demi-étoile s'il y en a une
+  // Ajouter la demi-étoile 
   if (halfStar) {
     stars.push(
       <FontAwesomeIcon
