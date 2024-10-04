@@ -134,7 +134,7 @@ const Footer = () => {
 
         <div className="bas-footer">
           <p>
-            <span id="copyright">©</span> <span itemProp="copyrightYear">2024</span> <span itemProp="name">CyberFLEX</span> - Tout droits réservés
+            <span id="copyright">©</span> <span itemProp="copyrightYear">2024</span> <span itemProp="name">CyberFLEX</span>
           </p>
         </div>
       </div>

@@ -92,7 +92,6 @@ html, body {
 
   
 .droite-footer, .milieu-footer, .bas-footer {
-    width: 33.33%; /* Divide space into thirds */
     height: auto; /* Adjust height as needed */
   }
   
@@ -217,9 +216,6 @@ html, body {
 
   
   .bas-footer {
-    left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
     text-align: center;
     color: black;
@@ -312,7 +308,7 @@ html, body {
   border: 2px solid black;
   border-radius: 25px;
   background-size: 200% 100%;
-  animation: loading 2s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  animation: loading 60s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
   margin-top: 10px;
 }
 
@@ -328,7 +324,9 @@ html, body {
 .status-container {
   /* Adjust height as needed */
   margin-top: 10px;
-  width: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
 }
 
 .status-container > div {
@@ -349,4 +347,5 @@ html, body {
 .newsletter-success.show,
 .newsletter-failure.show {
   display: block;
+  font-size: 1.5em;
 }
