@@ -48,8 +48,6 @@
   animation: scroll 30s linear infinite;
 }
 
-
-
 .carousel-item {
   min-width: 200px;
    /* Ajuster selon la taille des éléments du carousel */
@@ -65,12 +63,14 @@
   align-self: center;
   justify-content: center;
 }
+
 @media (max-width: 768px) {
   .item img {
     max-height: 100px;
     max-width: 100px;
   }
 }
+
 .carousel.left .carousel-item-enter {
   opacity: 0;
   transform: translateX(100%);
@@ -107,7 +107,6 @@
 .carousel.right .carousel-item-exit {
   opacity: 1;
   transform: translateX(0);
-  
 }
 
 .carousel.right .carousel-item-exit-active {
@@ -116,49 +115,6 @@
   transition: opacity 1000ms ease-in, transform 1000ms ease-out;
 }
 
-
 .item {
   position: relative;
-}
-
-.popup {
-  display: none;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  border: 1px solid blueviolet;
-  padding: 5px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  white-space: nowrap;
-}
-
-.popup .star {
-  font-size: 1.5rem; /* Ajuste la taille des étoiles */
-  color: blueviolet; /* Couleur des étoiles */
-  margin: 0 2px; /* Espacement entre les étoiles */
-}
-
-.star.full-star {
-  color: gold;
-}
-
-.star.half-star {
-  color: gold;
-}
-
-.star.empty-star {
-  color: lightgray;
-}
-
-.item:hover .popup {
-  display: block;
-}
-
-.popup .fa-star,
-.popup .fa-star-half-alt,
-.popup .fa-star-empty {
-  color: blueviolet;
 }

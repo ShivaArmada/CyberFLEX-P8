@@ -1,13 +1,7 @@
 import React from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowLeft,
-  faArrowRight,
-  faStar,
-  faStarHalfAlt,
-} from "@fortawesome/free-solid-svg-icons";
-import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./Carousel.css";
 
 class Carousel extends React.Component {
@@ -37,7 +31,6 @@ class Carousel extends React.Component {
           src={items[index].src}
           alt={items[index].alt}
           level={level}
-          rating={items[index].rating}
         />
       );
     }
@@ -78,7 +71,7 @@ class Carousel extends React.Component {
   }
 }
 
-const Item = ({ src, alt, level, rating }) => {
+const Item = ({ src, alt, level }) => {
   const style = useSpring({
     transform: `scale(${1 - Math.abs(level) * 0.2})`,
     opacity: 1 - Math.abs(level) * 0.3,
@@ -87,52 +80,8 @@ const Item = ({ src, alt, level, rating }) => {
   return (
     <animated.div className={`item level${level}`} style={style}>
       <img src={src} alt={alt} loading="lazy" />
-      <Popup rating={rating} />
     </animated.div>
   );
-};
-
-const Popup = ({ rating }) => {
-  const fullStars = Math.floor(rating); // Nombre d'étoiles pleines
-  const halfStar = rating % 1 !== 0; // Vérifie s'il y a une demi-étoile
-  const emptyStars = 5 - fullStars - (halfStar ? 1 : 0); // Calcul du nombre d'étoiles vides
-
-  const stars = [];
-
-  // Ajouter les étoiles pleines
-  for (let i = 0; i < fullStars; i++) {
-    stars.push(
-      <FontAwesomeIcon
-        key={`full-${i}`}
-        icon={faStar}
-        className="star full-star"
-      />
-    );
-  }
-
-  // Ajouter la demi-étoile 
-  if (halfStar) {
-    stars.push(
-      <FontAwesomeIcon
-        key="half-star"
-        icon={faStarHalfAlt}
-        className="star half-star"
-      />
-    );
-  }
-
-  // Ajouter les étoiles vides
-  for (let i = 0; i < emptyStars; i++) {
-    stars.push(
-      <FontAwesomeIcon
-        key={`empty-${i}`}
-        icon={faStarEmpty}
-        className="star empty-star"
-      />
-    );
-  }
-
-  return <div className="popup">{stars}</div>;
 };
 
 export default Carousel;
