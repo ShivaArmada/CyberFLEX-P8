@@ -12,6 +12,7 @@ const Contact = () => {
     confirmation: false
   });
   const [validationStatus, setValidationStatus] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -23,8 +24,10 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     if (!formData.confirmation) {
+      setLoading(false);
       setValidationStatus('failure');
       return;
     }
@@ -38,12 +41,14 @@ const Contact = () => {
         body: JSON.stringify(formData)
       });
 
+      setLoading(false);
       if (response.ok) {
         setValidationStatus('success');
       } else {
         setValidationStatus('failure');
       }
     } catch (error) {
+      setLoading(false);
       console.error('Error:', error);
       setValidationStatus('failure');
     }
@@ -145,14 +150,16 @@ const Contact = () => {
           </fieldset>
           <button 
             type="submit" 
-            className={validationStatus === 'success' ? 'btn-success' : validationStatus === 'failure' ? 'btn-failure' : ''}
+            className="contact__form--button"
+            disabled={loading}
           >
             Envoyer
           </button>
+          {loading && <div className="loading-bar show"></div>}
           {validationStatus && (
-            <span className={validationStatus === 'success' ? 'text-success' : 'text-failure'}>
-              {validationStatus === 'success' ? 'Validation' : 'Échec'}
-            </span>
+            <div className={validationStatus === 'success' ? 'text-success show' : 'text-failure show'}>
+              {validationStatus === 'success' ? 'Requête soumise' : 'Échec'}
+            </div>
           )}
         </form>
       </div>

@@ -14,9 +14,11 @@ function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [placeholder, setPlaceholder] = useState("Votre adresse e-mail");
   const [validationStatus, setValidationStatus] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
+    setLoading(true);
 
     fetch("https://backend-cyberflex.onrender.com/api/subscribe", {
       method: "POST",
@@ -26,6 +28,7 @@ function NewsletterForm() {
       body: JSON.stringify({ email }),
     })
       .then((response) => {
+        setLoading(false);
         if (response.ok) {
           setValidationStatus('newsletter-success');
         } else {
@@ -33,6 +36,7 @@ function NewsletterForm() {
         }
       })
       .catch((error) => {
+        setLoading(false);
         console.error("Erreur:", error);
         setValidationStatus('newsletter-failure');
       });
@@ -51,14 +55,20 @@ function NewsletterForm() {
         onChange={(e) => setEmail(e.target.value)}
         itemProp="email"
       />
-      <button type="submit" className="newsletter--button">
-        Newsletter
-      </button>
-      {validationStatus && (
-        <div className={validationStatus}>
-          {validationStatus === 'newsletter-success' ? 'Vous êtes inscrit à la newsletter !' : "Erreur lors de l'inscription. Veuillez réessayer."}
-        </div>
+      {loading ? (
+        <div className="loading-bar"></div>
+      ) : (
+        <button type="submit" className="newsletter--button">
+          Newsletter
+        </button>
       )}
+      <div className="status-container">
+        {validationStatus && (
+          <div className={`${validationStatus} show`}>
+            {validationStatus === 'newsletter-success' ? 'Vous êtes inscrit à la newsletter !' : "Échec lors de l'inscription. Veuillez réessayer."}
+          </div>
+        )}
+      </div>
     </form>
   );
 }
