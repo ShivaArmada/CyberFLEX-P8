@@ -166,3 +166,25 @@ textarea:focus {
 fieldset {
     width: 80%;
 }
+
+
+
+/* pour la partie alert du backend */
+
+.btn-success {
+    border: 2px solid green;
+  }
+  
+  .btn-failure {
+    border: 2px solid red;
+  }
+  
+  .text-success {
+    color: green;
+    margin-left: 10px;
+  }
+  
+  .text-failure {
+    color: red;
+    margin-left: 10px;
+  }

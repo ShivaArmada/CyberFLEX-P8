@@ -11,6 +11,7 @@ const Contact = () => {
     message: '',
     confirmation: false
   });
+  const [validationStatus, setValidationStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -22,29 +23,29 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (!formData.confirmation) {
-      alert("Vous devez accepter de soumettre vos informations personnelles.");
+      setValidationStatus('failure');
       return;
     }
-  
+
     try {
-      const response = await fetch('https://backend-cyberflex.onrender.com/api/send-email', { // Mise à jour de l'URL
+      const response = await fetch('https://backend-cyberflex.onrender.com/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
       });
-  
+
       if (response.ok) {
-        alert('Email envoyé avec succès!');
+        setValidationStatus('success');
       } else {
-        alert('Échec de l\'envoi du mail.');
+        setValidationStatus('failure');
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('Échec de l\'envoi du mail.');
+      setValidationStatus('failure');
     }
   };
 
@@ -142,7 +143,17 @@ const Contact = () => {
               />
             </div>
           </fieldset>
-          <button type="submit">Envoyer</button>
+          <button 
+            type="submit" 
+            className={validationStatus === 'success' ? 'btn-success' : validationStatus === 'failure' ? 'btn-failure' : ''}
+          >
+            Envoyer
+          </button>
+          {validationStatus && (
+            <span className={validationStatus === 'success' ? 'text-success' : 'text-failure'}>
+              {validationStatus === 'success' ? 'Validation' : 'Échec'}
+            </span>
+          )}
         </form>
       </div>
     </div>

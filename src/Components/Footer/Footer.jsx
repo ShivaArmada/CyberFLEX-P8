@@ -13,6 +13,7 @@ import logobw from "../../Assets/bwlogo.webp";
 function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [placeholder, setPlaceholder] = useState("Votre adresse e-mail");
+  const [validationStatus, setValidationStatus] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault(); 
@@ -26,13 +27,14 @@ function NewsletterForm() {
     })
       .then((response) => {
         if (response.ok) {
-          alert("Vous êtes inscrit à la newsletter !");
+          setValidationStatus('newsletter-success');
         } else {
-          alert("Erreur lors de l'inscription. Veuillez réessayer.");
+          setValidationStatus('newsletter-failure');
         }
       })
       .catch((error) => {
         console.error("Erreur:", error);
+        setValidationStatus('newsletter-failure');
       });
   };
 
@@ -52,6 +54,11 @@ function NewsletterForm() {
       <button type="submit" className="newsletter--button">
         Newsletter
       </button>
+      {validationStatus && (
+        <div className={validationStatus}>
+          {validationStatus === 'newsletter-success' ? 'Vous êtes inscrit à la newsletter !' : "Erreur lors de l'inscription. Veuillez réessayer."}
+        </div>
+      )}
     </form>
   );
 }

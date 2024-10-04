@@ -211,6 +211,7 @@ html, body {
     justify-content: center;
     align-items: center;
     color: black;
+    flex-wrap: wrap;
   }
   
 
@@ -266,4 +267,25 @@ html, body {
     }
 
   }
+
+  /* partie backend */ 
+
+.newsletter-success,
+.newsletter-failure {
+  display: block;
+  width: 80%;
+  border-radius: 25px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.newsletter-success {
+  color: white;
+  background-color: green;
+}
+
+.newsletter-failure {
+  color: white;
+  background-color: red;
+}
   
