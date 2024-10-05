@@ -308,7 +308,7 @@ html, body {
   border: 2px solid black;
   border-radius: 25px;
   background-size: 200% 100%;
-  animation: loading 60s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  animation: loading 190s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
   margin-top: 10px;
 }
 
@@ -322,7 +322,6 @@ html, body {
 }
 
 .status-container {
-  /* Adjust height as needed */
   margin-top: 10px;
   width: 60%;
   display: flex;
